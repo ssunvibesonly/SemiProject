@@ -134,7 +134,7 @@ public class MemberDao {
 				dto.setMem_id(rs.getString("mem_id"));
 				dto.setMem_pass(rs.getString("mem_pass"));
 				dto.setMem_name(rs.getString("mem_name"));
-				dto.setMem_gender(rs.getString("mem_gendr"));
+				dto.setMem_gender(rs.getString("mem_gender"));
 				dto.setMem_birth(rs.getString("mem_birth"));
 				dto.setMem_ph(rs.getString("mem_ph"));
 				dto.setMem_email(rs.getString("mem_email"));
@@ -203,7 +203,7 @@ public class MemberDao {
 				
 				if(rs.next())
 				{					
-					name=rs.getString("name");	
+					name=rs.getString("mem_name");	
 				}
 				
 			} catch (SQLException e) {
@@ -238,7 +238,7 @@ public class MemberDao {
 					dto.setMem_id(rs.getString("mem_id"));
 					dto.setMem_pass(rs.getString("mem_pass"));
 					dto.setMem_name(rs.getString("mem_name"));
-					dto.setMem_gender(rs.getString("mem_gendr"));
+					dto.setMem_gender(rs.getString("mem_gender"));
 					dto.setMem_birth(rs.getString("mem_birth"));
 					dto.setMem_ph(rs.getString("mem_ph"));
 					dto.setMem_email(rs.getString("mem_email"));

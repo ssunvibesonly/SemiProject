@@ -1,5 +1,5 @@
-<%@page import="movie.model.MovieDto"%>
-<%@page import="movie.model.MovieDao"%>
+<%@page import="data.dto.MovieDto"%>
+<%@page import="data.dao.MovieDao"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -47,7 +47,7 @@
 	//포스터
 	String poster=multi.getFilesystemName("poster");
 	
-	dto.setMv_poster("../upload/"+poster); //사진선택한경우
+	dto.setMv_poster("upload/"+poster); //사진선택한경우
 	
 	//db에 insert    
 	dao.insertMovie(dto);

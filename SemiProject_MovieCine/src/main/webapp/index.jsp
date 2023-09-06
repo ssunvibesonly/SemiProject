@@ -23,14 +23,37 @@
 %>
 </head>
 <style type="text/css">
+.layout{
+}
+
+.header{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.main{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 176px;
+}
+
+.footer{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top:1580px;
+}
 </style>
-<body>
+<body background="color: black;">
+	
 	<div class="layout header">
 		<jsp:include page="layout/header.jsp"/>
 	</div>
 	
 	<div class="layout main">
-		<jsp:include page="layout/main.jsp"/>
+		<jsp:include page="<%=mainPage %>"/>
 	</div>
 	
 	<div class="layout footer">

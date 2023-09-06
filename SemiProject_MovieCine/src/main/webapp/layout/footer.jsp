@@ -13,8 +13,23 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<title>Insert title here</title>
+<title>footer</title>
 <style>
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F28A8A; /* 흰색 글씨로 변경 */
+	text-decoration: none; /* 밑줄 제거 */
+}
+
 body {
 	background-color: black;
 }
@@ -77,7 +92,7 @@ String root = request.getContextPath();
 	<div class="footer_content1">
 		<div class="gwang-go content1">
 			<img src="<%=root%>/image/mack.jpeg" name="mack" id="mack"
-				style="height: 350px;"
+				style="height: 500px;"
 				onclick="location.href='https://www.mcdonalds.co.kr/kor/main.do'">
 		</div>
 		<div class="contents1" align="center">

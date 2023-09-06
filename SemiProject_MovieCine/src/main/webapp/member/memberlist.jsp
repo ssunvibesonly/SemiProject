@@ -1,5 +1,5 @@
-<%@page import="member.model.MemberDto"%>
-<%@page import="member.model.MemberDao"%>
+<%@page import="data.dto.MemberDto"%>
+<%@page import="data.dao.MemberDao"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>

@@ -1,4 +1,4 @@
-<%@page import="member.model.MemberDao"%>
+<%@page import="data.dao.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,10 +25,7 @@
    <br><br>
    <b><%=name %>님이 로그인하셨습니다</b>
    <button type="button" class="btn btn-danger"
-   onclick="location.href='logoutaction.jsp'">로그아웃</button>
-   
-   <button type="button" class="btn btn-danger"
-   onclick="location.href='../member/memberlist.jsp'">회원목록</button>
+   onclick="location.href='login/logoutaction.jsp'">로그아웃</button>
 </div>
 </body>
 </html>

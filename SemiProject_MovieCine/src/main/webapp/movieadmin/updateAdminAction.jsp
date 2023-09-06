@@ -1,5 +1,5 @@
-<%@page import="movie.model.MovieDto"%>
-<%@page import="movie.model.MovieDao"%>
+<%@page import="data.dto.MovieDto"%>
+<%@page import="data.dao.MovieDao"%>
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"

@@ -37,7 +37,7 @@ hr{
 <hr>
 
 <div class="loginform">
-   <form action="loginaction.jsp" method="post">
+   <form action="login/loginaction.jsp" method="post">
       <b style="color: #666666;">아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</b>
       <br>
       <table style="width: 500px; margin-top: 1%;">
@@ -76,7 +76,7 @@ hr{
    </form>
 </div>
 <button type="button" class="btn btn-outline-success"
-onclick="location.href='../member/memberform.jsp'">회원가입</button>
+onclick="location.href='index.jsp?main=member/memberform.jsp'">회원가입</button>
 <hr>
 </body>
 </html>

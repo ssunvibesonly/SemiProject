@@ -16,6 +16,9 @@
 String root = request.getContextPath();
 %>	
 <style type="text/css">
+body{
+	background-color: black;
+}
 
 li {	
     list-style: none;
@@ -37,10 +40,9 @@ a:hover {
 }
 
 .header_content {
-	width: 100%;
-	height: 120px;
-	background-color: black;
-	border-bottom: ;
+    width: 100%;
+    height: 120px;
+    background-color: black;
 }
 
 .header_content ul li {
@@ -67,6 +69,7 @@ a:hover {
 
 .menu_hover1 {
 	width: 99.9999%;
+	font-size: 14pt;
 }
 
 .menu_hover1:hover {
@@ -120,70 +123,77 @@ span:hover {
 </style>
 </head>
 <body>
+	<header>
 	<!-- 메인 헤더 -->
 	<div class="header_content">
 		<div class="contents" align="center">
 			<ul class="memberInfo_wrap">
-				<li style="margin: 0px 530px 0px 100px;"><a
-					href="<%=root %>index.jsp"><img alt=""
+				<li><a
+					href="<%=root %>/index.jsp"><img alt=""
 						src="<%=root%>/logoimg/logo.gif"
-						style="width: 250px; height: 55px; position: absolute; left: 39%; top: 55px;"></a></li>
-				<li style="margin: 10px 30px 0px 0px;"><a
-					href="<%=root%>/index.jsp?main=member/memberloginform.jsp"><img
+						style="width: 16.5%; height: 9%; position: absolute; left: 41.2%; top:6%"></a></li>
+				<li><a
+					href="<%=root%>/index.jsp?main=login/loginmain.jsp"><img
 						src="<%=root%>/logoimg/1.png" alt=""
-						style="width: 30px; height: 30px; position: absolute; left: 73%; top: 9%;" /><br>
-					<span style="left: 72.9%; top: 15%;">로그인</span></a></li>
-				<li style="margin: 10px 30px 0px 0px;"><a
+						style="width: 20px; height: 20px; position: absolute; left: 80%; top: 6%;" /><br>
+					<span style="left: 79.65%; top: 10%;">로그인</span></a></li>
+				<li><a
 					href="<%=root%>/index.jsp?main=member/memberaddform.jsp"><img
 						src="<%=root%>/logoimg/2.png" alt=""
-						style="width: 30px; height: 30px; position: absolute; left: 79%; top: 9%;" /><br>
-					<span style="left: 78.5%; top: 15%;">회원가입</span></a></li>
-				<li style="margin: 10px 25px 0px 0px;"><a
+						style="width: 20px; height: 20px; position: absolute; left: 84.1%; top: 6%;" /><br>
+					<span style="left: 83.5%; top: 10%;">회원가입</span></a></li>
+				<li><a
 					href="<%=root%>/index.jsp?main=member/memebermypage.jsp"><img
 						src="<%=root%>/logoimg/3.png" alt=""
-						style="width: 30px; height: 30px; position: absolute; left: 85%; top: 9%;" /><br>
-					<span style="left: 84.1%; top: 15%;">MY INFO</span></a></li>
-				<li style="margin: 10px 30px 0px 0px;"><a href=""><img
+						style="width: 20px; height: 20px; position: absolute; left: 88.35%; top: 6%;" /><br>
+					<span style="left: 87.5%; top: 10%;">MY INFO</span></a></li>
+				<li><a href=""><img
 						src="<%=root%>/logoimg/4.png" alt=""
-						style="width: 30px; height: 30px; color: white; position: absolute; left: 91%; top: 9%;" /><br>
-					<span style="left: 90.7%; top: 15%;">고객센터</span></a></li>
+						style="width: 20px; height: 20px; color: white; position: absolute; left: 92.2%; top: 6%;" /><br>
+					<span style="left: 91.7%; top: 10%;">고객센터</span></a></li>
 			</ul>
 		</div>
 	</div>
 
-	<div class="menu_hover1">
+	<div class="menu_hover1" style="width: 100%;">
 		<!-- 메뉴바 -->
 		<nav class="navbar navbar-expand navbar-#E58484 bg-black"
-			id="navborder">
+			id="navborder" style="width: 100%; height: 40px;">
 			<a class="navbar-brand" href="#"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarsExample02" aria-controls="navbarsExample02"
 				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarsExample02">
+			<div class="collapse navbar-collapse" id="navbarsExample02" style="width: 100%">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active" style="margin-left: 385px;">
-					<a class="nav-link" href="#"><b>영화</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"
-						style="margin-left: 30px;"><b>극장</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"
-						style="margin-left: 30px;"><b>예매</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"
-						style="margin-left: 30px;"><b>스토어</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"
-						style="margin-left: 30px;"><b>이벤트</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"
-						style="margin-left: 30px;"><b>혜택</b></a></li>
+					<li class="nav-item active" style="position: absolute; left: 34%; top: 10%;">
+					<a href="#"><b>영화</b></a></li>
+					
+					<li class="nav-item"><a  href="#"
+						style="position: absolute; left: 40%; top: 10%"><b>극장</b></a></li>
+						
+					<li class="nav-item"><a  href="<%=root%>/index.jsp?main=Movie_reserve/movielist.jsp"
+						style="position: absolute; left: 46%; top: 10%"><b>예매</b></a></li>
+						
+					<li class="nav-item"><a  href="#"
+						style="position: absolute; left: 51.7%; top: 10%"><b>스토어</b></a></li>
+						
+					<li class="nav-item"><a  href="#"
+						style="position: absolute; left: 58%; top: 10%"><b>이벤트</b></a></li>
+						
+					<li class="nav-item"><a  href="#"
+						style="position: absolute; left: 64%; top: 10%"><b>혜택</b></a></li>
+					
 					<li class="nav-item">
 						<form class="form-inline my-2 my-md-0">
 							<input class="form-control" type="text"
-								style="margin-left: 125px; margin-top: 7px; width: 180px; height: 25px;">
+								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;">
 						</form>
 					</li>
 					<li class="nav-item"><a href=""><img
 							src="<%=root%>/logoimg/search1.png" alt=""
-							style="margin-left: 3px; margin-top: 10px; width: 17px; height: 17px;" /></a>
+							style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;"/></a>
 					</li>
 				</ul>
 			</div>
@@ -287,5 +297,6 @@ span:hover {
 		    });
 		});
 		</script>
+		</header>
 </body>
 </html>

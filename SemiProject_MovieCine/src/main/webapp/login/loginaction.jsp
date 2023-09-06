@@ -1,4 +1,5 @@
-<%@page import="member.model.MemberDao"%>
+<%@page import="data.dao.MemberDao"%>
+<%@page import="data.dto.MemberDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ if(b){
    session.setAttribute("saveok", cbsave==null?null:"yes");
    
    //로그인메인으로 이동
-   response.sendRedirect("logoutform.jsp");
+   response.sendRedirect("../index.jsp?main=login/loginmain.jsp");
 }else{%>
 
    <script type="text/javascript">

@@ -13,6 +13,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
+<style type="text/css">
+table {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+</style>
 <script type="text/javascript">
 
 	function funcdel(num) {
@@ -41,7 +48,7 @@
 <br>
 <h1>회원목록</h1>
 <br>
-<table class="table table-bordered" style="width: 1000px;">
+<table class="table table-bordered" style="width: 100%;">
 <tr class="table-success" align="center">
 <th style="background-color: #e6e6fa" width="80px" valign="middle">번호</th>
 <th style="background-color: #e6e6fa" width="120px" valign="middle">아이디</th>

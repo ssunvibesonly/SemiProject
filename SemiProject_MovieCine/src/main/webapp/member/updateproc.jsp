@@ -39,7 +39,7 @@
    MemberDao dao=new MemberDao();
    dao.updateMember(dto);
    
-   response.sendRedirect("myinfo.jsp");
+   response.sendRedirect("index.jsp?main=member/myinfo.jsp");
 %>
 </body>
 </html>

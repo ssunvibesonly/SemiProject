@@ -27,7 +27,7 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
    %>
  
       <table class="table table-bordered" style="width: 700px; margin: 50px 150px; border: 1px solid black;">
-      <caption align="top">회원정보</caption>
+      <caption align="top" style="color: silver; font-weight: bold;">회원정보</caption>
       
       <tr>
          <td style="width: 100px;">아이디</td>
@@ -64,9 +64,11 @@ SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
       <tr>
          <td colspan="2">
          <button type="button" class="btn btn-outline-success btn-sm"
-         onclick="location.href='updateform.jsp?num=<%=dto.getMem_no()%>'">수정</button>
+         onclick="location.href='index.jsp?main=member/updateform.jsp?num=<%=dto.getMem_no()%>'">수정</button>
          <button type="button" class="btn btn-outline-danger btn-sm"
-         onclick="location.href='memberdelete.jsp?num=<%=dto.getMem_no()%>'">삭제</button>
+         onclick="location.href='index.jsp?main=member/memberdelete.jsp?num=<%=dto.getMem_no()%>'">삭제</button>
+         <button type="button" class="btn btn-outline-info btn-sm"
+         onclick="location.href='#'">관리자모드</button>
          </td>
       </tr>
       </table>

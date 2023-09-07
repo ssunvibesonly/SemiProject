@@ -21,7 +21,7 @@ MemberDao dao=new MemberDao();
 
 dao.deleteMember(num);
 
-response.sendRedirect("memberlist.jsp");
+response.sendRedirect("index.jsp?main=member/memberlist.jsp");
 %>
 </body>
 </html>

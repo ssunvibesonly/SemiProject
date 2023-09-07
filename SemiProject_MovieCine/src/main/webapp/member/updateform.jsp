@@ -41,11 +41,11 @@
   
 %>
 <body>
-<div style="margin: 80px 444px;">
+<div style="margin: 80px 444px;  height:600px;">
       <form action="updateproc.jsp" method="post" class="form-inline" id="mfrm">
          <input type="hidden" name="num" value="<%=num%>">
          <table class="table table-bordered" style="width: 500px; position: absolute;">
-            <caption align="top">회원정보수정</caption>
+            <caption align="top" style="color: silver; font-weight: bold;">회원정보수정</caption>
             <tr>
                <td style="width: 100px;" valign="middle" align="center">아이디</td>
                <td>

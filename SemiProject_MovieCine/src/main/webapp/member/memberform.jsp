@@ -10,35 +10,6 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 	$(function() {
-		
-		//id중복체크
-		$("#btncheck").click(function() {
-			
-			//id읽기
-			var id=$("#id").val();
-			//alert(id);
-			
-			$.ajax({
-				
-				type:"get",
-				url:"member/idsearch.jsp",
-				dataType:"json",
-				data:{"id":id},
-				success:function(data){
-					
-					//alert(data.count);
-					if(data.count==1)
-						{
-						$("span.idsuccess").text("fail");
-						$("#id").val("");
-						$("#id").focus();
-						}else{
-							$("span.idsuccess").text("success");
-						}
-				}
-		});
-	});
-
 	
 	//선택 이메일 주소 넣기..혹은 직접입력
 		$("#selemail").change(function(){
@@ -177,7 +148,7 @@
 	<script type="text/javascript">
 		function openId() {
 			
-			window.open("idcheck.jsp","e","left=400px; top=100px,width=260px,height=185px");
+			window.open("member/idcheck.jsp","e","left=400px; top=100px,width=260px,height=185px");
 		}	
 	</script>
 	

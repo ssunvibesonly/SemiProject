@@ -143,7 +143,7 @@ span:hover {
 						style="width: 20px; height: 20px; position: absolute; left: 84.1%; top: 6%;" /><br>
 					<span style="left: 83.5%; top: 10%;">회원가입</span></a></li>
 				<li><a
-					href="<%=root%>/index.jsp?main=member/memebermypage.jsp"><img
+					href="<%=root%>/index.jsp?main=member/myinfo.jsp"><img
 						src="<%=root%>/logoimg/3.png" alt=""
 						style="width: 20px; height: 20px; position: absolute; left: 88.35%; top: 6%;" /><br>
 					<span style="left: 87.5%; top: 10%;">MY INFO</span></a></li>

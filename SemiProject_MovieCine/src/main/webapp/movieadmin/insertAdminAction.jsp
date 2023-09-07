@@ -47,7 +47,7 @@
 	//포스터
 	String poster=multi.getFilesystemName("poster");
 	
-	dto.setMv_poster("upload/"+poster); //사진선택한경우
+	dto.setMv_poster("/upload/"+poster); //사진선택한경우
 	
 	//db에 insert    
 	dao.insertMovie(dto);

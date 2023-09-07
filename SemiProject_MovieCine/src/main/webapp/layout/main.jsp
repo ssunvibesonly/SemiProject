@@ -501,7 +501,7 @@ List <MovieDto> list=dao.getAllMovies();
 					$(document).ready(function() {
 				        // 페이지가 로드될 때 초기 이미지 설정
 				        var defaultText = "SUITE CINEMA"; // 디폴트로 보여줄 텍스트
-				        var defaultImageUrl = "<img src='<%=root%>/image/special1.png'>"; // 디폴트 이미지 경로 설정
+				        var defaultImageUrl = "<img src='<%=root%>/image/special5.png'>"; // 디폴트 이미지 경로 설정
 
 				        // 디폴트 이미지를 special_result 요소에 추가
 				        $(".special_result").html(defaultImageUrl);

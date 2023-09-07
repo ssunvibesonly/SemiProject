@@ -17,8 +17,11 @@ hr{
 }
 
 .loginform {
-   margin-left: 10%;
+   margin-left: 35%;
+   margin-top: 5%;
+   color: silver;
 }
+
 
 </style>
 </head>
@@ -38,7 +41,7 @@ hr{
 
 <div class="loginform">
    <form action="login/loginaction.jsp" method="post">
-      <b style="color: #666666;">아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</b>
+      <b style="color: silver;">아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</b>
       <br>
       <table style="width: 500px; margin-top: 1%;">
          <tr>
@@ -61,22 +64,24 @@ hr{
             &nbsp;&nbsp;&nbsp;
             <button type="submit" class="btn btn-danger" id="btnlogin"
             style="width: 250px;">로그인</button>
+            <button type="button" class="btn btn-outline-success"
+			onclick="location.href='index.jsp?main=member/memberform.jsp'">회원가입</button>	
             </td>
          </tr>
          <tr>   
             <td>
             &nbsp;&nbsp;&nbsp;
             <input type="checkbox" name="cbsave"
-            <%=saveok==null?"":"checked" %>>아이디저장
-               <a href="#" style="color: #666666;">아이디 찾기></a>
-               <a href="#" style="color: #666666;">비밀번호 찾기></a>
+            <%=saveok==null?"":"checked" %> style="color: silver;">아이디저장
+               <a href="#" style="color: silver;">아이디 찾기></a>
+               <a href="#" style="color: silver;">비밀번호 찾기></a>
             </td>
          </tr>
       </table>
    </form>
+
 </div>
-<button type="button" class="btn btn-outline-success"
-onclick="location.href='index.jsp?main=member/memberform.jsp'">회원가입</button>
+
 <hr>
 </body>
 </html>

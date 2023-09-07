@@ -65,7 +65,7 @@
 </script>
 </head>
 <body>
-	<div style="margin: 80px 444px;">
+	<div style="margin: 60px 400px; width:100% ; height:600px;">
 		<form action="memberproc.jsp" method="post" class="form-inline" id="mfrm">
 			<table class="table table-bordered" style="width: 500px; position: absolute;">
 				<caption align="top">회원가입</caption>

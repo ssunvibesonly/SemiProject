@@ -138,7 +138,7 @@ span:hover {
 						style="width: 20px; height: 20px; position: absolute; left: 80%; top: 6%;" /><br>
 					<span style="left: 79.65%; top: 10%;">로그인</span></a></li>
 				<li><a
-					href="<%=root%>/index.jsp?main=member/memberaddform.jsp"><img
+					href="<%=root%>/index.jsp?main=member/memberform.jsp"><img
 						src="<%=root%>/logoimg/2.png" alt=""
 						style="width: 20px; height: 20px; position: absolute; left: 84.1%; top: 6%;" /><br>
 					<span style="left: 83.5%; top: 10%;">회원가입</span></a></li>

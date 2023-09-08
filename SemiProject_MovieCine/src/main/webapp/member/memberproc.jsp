@@ -1,5 +1,5 @@
-<%@page import="member.model.MemberDao"%>
-<%@page import="member.model.MemberDto"%>
+<%@page import="data.dao.MemberDao"%>
+<%@page import="data.dto.MemberDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,8 +25,8 @@
 	String birth=request.getParameter("birth");
 	String ph=request.getParameter("phone1")+"-"+request.getParameter("phone2")+"-"+request.getParameter("phone3");
 	String email=request.getParameter("email1")+"@"+request.getParameter("email2");
-	String addr=request.getParameter("addr");
-	
+	String addr="("+request.getParameter("postnum")+")\t"+request.getParameter("addr1")+"\t"+request.getParameter("addr2")+"\t"+request.getParameter("addr3");
+		
 	dto.setMem_id(id);
 	dto.setMem_pass(pass);
 	dto.setMem_name(name);

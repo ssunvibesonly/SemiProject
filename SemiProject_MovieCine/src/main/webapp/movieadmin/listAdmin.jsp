@@ -1,8 +1,7 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="movie.model.MovieDto"%>
+<%@page import="data.dto.MovieDto"%>
 <%@page import="java.util.List"%>
-<%@page import="movie.model.MovieDao"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="data.dao.MovieDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +12,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Dongle:wght@300&family=Gamja+Flower&family=Gowun+Batang&family=Gowun+Dodum&family=Hi+Melody&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Poor+Story&family=Sunflower:wght@300&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Insert title here</title>
+<style>
+  table {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+</style>
 </head>
 <%
 	MovieDao dao=new MovieDao();
@@ -21,24 +27,24 @@
 %>
 
 <body>
-<table class="table table-bordered" style="max-width :1000px;">
+<table class="table table-bordered" >
 <tr class="table-success" valign="middle" align="center">
 	
-	<th width="50">번호</th>
-	<th width="50">제목</th>
-	<th width="200">포스터</th>
-	<th width="50">감독</th>
-	<th width="500">줄거리</th>
-	<th width="50">트레일러</th>
-	<th width="50">개봉일자</th>
-	<th width="200">기본정보</th>
-	<th width="100">등록일자</th>
-	<th width="50">장르</th>
-	<th width="50">배우</th>
-	<th width="50">성인가격</th>
-	<th width="50">청소년가격</th>
-	<th width="50">아동가격</th>
-	<th width="50">영화괸리</th>
+	<th>번호</th>
+	<th>제목</th>
+	<th>포스터</th>
+	<th>감독</th>
+	<th>줄거리</th>
+	<th>트레일러</th>
+	<th>개봉일자</th>
+	<th>기본정보</th>
+	<th>등록일자</th>
+	<th>장르</th>
+	<th>배우</th>
+	<th>성인가격</th>
+	<th>청소년가격</th>
+	<th>아동가격</th>
+	<th>영화관리</th>
 </tr>
 <%
 	for(int i=0;i<list.size();i++){
@@ -51,7 +57,7 @@
 		
 		<td><img src="<%=dto.getMv_poster() %>" width="50px" height="150px"></td>
 		<td><%=dto.getMv_director() %></td>
-		<td><pre><%=dto.getMv_st() %></pre></td>
+		<td><%=dto.getMv_st() %></td>
 		<td><%=dto.getMv_trailer() %></td>
 		<td><%=dto.getMv_opendate() %></td>
 		<td><%=dto.getMv_info() %></td>
@@ -61,9 +67,9 @@
 		<td><%=dto.getMv_adult() %></td>
 		<td><%=dto.getMv_teen() %></td>
 		<td><%=dto.getMv_child() %></td>
-		<td class="btn">
+		<td class="btn"> 
 		<button type="button" class="btn btn-outline-warning" 
-		onclick="location.href='updateAdminForm.jsp?num=<%=dto.getMv_no()%>'">정보수정</button><br>
+		onclick="location.href='updateAdminForm.jsp?num=<%=dto.getMv_no()%>'">정보수정</button><br><br><br><hr><br><br><br>
 		<button type="button" class="btn btn-outline-danger" 
 		onclick="location.href='deleteAdmin.jsp?num=<%=dto.getMv_no() %>'">정보삭제</button>
 		</td>

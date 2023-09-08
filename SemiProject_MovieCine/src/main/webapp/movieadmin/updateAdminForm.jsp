@@ -1,5 +1,5 @@
-<%@page import="movie.model.MovieDto"%>
-<%@page import="movie.model.MovieDao"%>
+<%@page import="data.dto.MovieDto"%>
+<%@page import="data.dao.MovieDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

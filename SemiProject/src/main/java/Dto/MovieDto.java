@@ -3,6 +3,7 @@ package Dto;
 import java.sql.Timestamp;
 
 public class MovieDto {
+<<<<<<< HEAD
 		private String mv_no;
 	   private String mv_title;
 	   private String mv_poster;
@@ -18,6 +19,22 @@ public class MovieDto {
 	   private int mv_teen;
 	   private int mv_child;
 
+=======
+	private String mv_no;
+	private String mv_title;
+	private String mv_poster;
+	private String mv_director;
+	private String mv_st;
+	private String mv_trailer;
+	private String mv_opendate;
+	private String mv_info;
+	private Timestamp mv_regdate;
+	private String mv_genre;
+	private String mv_name;
+	private int mv_adult;
+	private int mv_teen;
+	private int mv_child;
+>>>>>>> goyoung
 	
 	public String getMv_no() {
 		return mv_no;

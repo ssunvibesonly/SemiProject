@@ -1,1 +1,0 @@
-insert into movie_book(bo_no,bo_seat,mv_poster,mv_city,mv_date,mv_time,bo_adultCnt,bo_childCnt,bo_price,bo_regdate)values(null,null,

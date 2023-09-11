@@ -3,6 +3,7 @@
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.security.SecureRandom" %>
 <%@ page import="java.math.BigInteger" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,10 +98,38 @@ hr{
          	<a href="<%=apiURL%>"><img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
          	</td>
          </tr>
+         <tr>
+         	<td>
+         	<a href="javascript:kakaoLogin();"><img height="38px"  src="./image/kakao_login_button.png"/></a>
+         	</td>
+         </tr>
+         
       </table>
    </form>
 
 </div>
 <hr>
+<script type="text/javascript" src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+	window.kakao.init("8a07f76bebec8cff1421aad9e6b99056");
+	
+	function kakaoLogin() {
+		window.kakao.Auth.login(){
+			scope:'profile_nickname,profile_image,account_email',
+			success: function(authObj) {
+				console.log(authObj);
+				window.Kakao.API.request({
+					url:'/v2/user/me',
+					success: res=>{
+						const kakao_account=res.kakao_account;
+						console.log(kakao_account);
+					}
+						
+				})
+			}
+		})
+		
+	}
+</script>
 </body>
 </html>

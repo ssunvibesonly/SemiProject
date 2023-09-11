@@ -397,7 +397,7 @@ List <MovieDto> list=dao.getAllMovies();
 					<a href="#" id="futuremovie1"><i class="bi bi-film"></i> 상영예정작</a>
 				</h4>
 				<button type="button" id="btnall1" name="btnall1"
-					class="btn btn-right" onclick="location.href=''">전체보기</button>
+					class="btn btn-right" onclick="location.href='index.jsp?main=movieadmin/movielist.jsp'">전체보기</button>
 			</div>
 			<!-- Swiper -->
 			<div class="swiper mySwiper">
@@ -465,7 +465,7 @@ List <MovieDto> list=dao.getAllMovies();
 					
 					<div class="special_special"><b>특별관</b></div>
 					<button type="button" id="btnall2" name="btnall2"
-					class="btn btn-right" onclick="location.href=''">전체보기</button>
+					class="btn btn-right" onclick="location.href='#'">전체보기</button>
 						
 					<div class="special_hall_contents">
 					<div class="special_result"></div>

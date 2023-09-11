@@ -203,4 +203,52 @@ public class MovieDao {
 		
 		
 	}
-}
+	//영화 제목 검색
+	public List<MovieDto> getmovie(String search) {	
+		List<MovieDto> list=new ArrayList<MovieDto>();
+	      
+	      Connection conn=db.getConnection();
+	      PreparedStatement pstmt=null;
+	      ResultSet rs=null;
+	      
+	      String sql="select * from movie_table where mv_title like ? order by mv_no";
+	      
+	      try {
+	         pstmt=conn.prepareStatement(sql);
+	         pstmt.setString(1, "%"+search+"%");
+	         rs=pstmt.executeQuery();
+	         
+	         while(rs.next())
+	         {
+	            MovieDto dto=new MovieDto();
+	            
+	            dto.setMv_no(rs.getString("mv_no"));
+	            dto.setMv_title(rs.getString("mv_title"));
+	            dto.setMv_poster(rs.getString("mv_poster"));
+	            dto.setMv_director(rs.getString("mv_director"));
+	            dto.setMv_st(rs.getString("mv_st"));
+	            dto.setMv_trailer(rs.getString("mv_trailer"));
+	            dto.setMv_opendate(rs.getString("mv_opendate"));
+	            dto.setMv_info(rs.getString("mv_info"));
+	            dto.setMv_regdate(rs.getTimestamp("mv_regdate"));
+	            dto.setMv_genre(rs.getString("mv_genre"));
+	            dto.setMv_name(rs.getString("mv_name"));
+	            dto.setMv_adult(rs.getInt("mv_adult"));
+	            dto.setMv_teen(rs.getInt("mv_teen"));
+	            dto.setMv_child(rs.getInt("mv_child"));
+	            
+	            list.add(dto);
+	         }
+	         
+	      } catch (SQLException e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }finally {
+	         db.dbClose(rs, pstmt, conn);
+	      }
+	      
+	      return list;
+	   }
+		
+	}
+

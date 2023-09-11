@@ -253,6 +253,46 @@ public class MemberDao {
 		
 		}
 		
+		public MemberDto getDataId(String id)
+        {
+           MemberDto dto=new MemberDto();
+           
+           Connection conn=db.getConnection();
+           PreparedStatement pstmt=null;
+           ResultSet rs=null;
+           
+           String sql="select * from member_table where mem_id=?";
+           
+           try {
+              pstmt=conn.prepareStatement(sql);
+              
+              pstmt.setString(1, id);
+              rs=pstmt.executeQuery();
+                          
+              if(rs.next())
+              {
+                 dto.setMem_no(rs.getString("mem_no"));
+                 dto.setMem_id(rs.getString("mem_id"));
+                 dto.setMem_pass(rs.getString("mem_pass"));
+                 dto.setMem_name(rs.getString("mem_name"));
+                 dto.setMem_gender(rs.getString("mem_gender"));
+                 dto.setMem_birth(rs.getString("mem_birth"));
+                 dto.setMem_ph(rs.getString("mem_ph"));
+                 dto.setMem_email(rs.getString("mem_email"));
+                 dto.setMem_regdate(rs.getTimestamp("mem_regdate"));
+                 dto.setMem_addr(rs.getString("mem_addr"));
+              }
+           } catch (SQLException e) {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+           } finally {
+              db.dbClose(rs, pstmt, conn);
+           }
+           
+           return dto;
+        
+        }
+		
 		//update		
 		public void updateMember(MemberDto dto)
 		{

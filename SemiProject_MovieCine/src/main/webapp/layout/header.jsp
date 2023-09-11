@@ -1,3 +1,5 @@
+<%@page import="data.dto.MovieDto"%>
+<%@page import="data.dao.MovieDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,11 +11,14 @@
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
 	rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 <%
 //절대경로잡기
 String root = request.getContextPath();
+
+MovieDto dto=new MovieDto();
 %>	
 <style type="text/css">
 body{
@@ -186,15 +191,18 @@ span:hover {
 						style="position: absolute; left: 64%; top: 10%"><b>혜택</b></a></li>
 					
 					<li class="nav-item">
-						<form class="form-inline my-2 my-md-0">
-							<input class="form-control" type="text"
-								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;">
-						</form>
+						<input class="form-control" type="text" name="search"
+								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;"><a href="index.jsp?main=movieadmin/searchresult.jsp?search=<%=dto.getMv_title()%>"><i class="bi bi-search" style="background-color: white;position: flex;"></i></a>					
 					</li>
-					<li class="nav-item"><a href=""><img
-							src="<%=root%>/logoimg/search1.png" alt=""
-							style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;"/></a>
-					</li>
+					<%-- <%
+					String search=request.getParameter("search");
+					%>
+					<li class="nav-item">
+					<input type="image" src="<%=root%>/logoimg/search1.png" style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;"
+					onclick="location.href='index.jsp?main=movieadmin/searchresult.jsp?search=<%=search%>'">
+		
+					</li> --%>
+					
 				</ul>
 			</div>
 		</nav>

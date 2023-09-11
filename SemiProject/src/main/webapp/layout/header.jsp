@@ -1,21 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	pageEncoding="UTF-8"%>
 =======
     pageEncoding="UTF-8"%>
 >>>>>>> goyoung
+=======
+	pageEncoding="UTF-8"%>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 	rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
 	rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<<<<<<< HEAD
 <title>Insert title here</title>
+=======
+<title>header</title>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%
 //절대경로잡기
 String root = request.getContextPath();
@@ -31,6 +42,7 @@ li {
 
 a:link {
 	color: white;
+<<<<<<< HEAD
 =======
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -44,26 +56,36 @@ li {
 a:link {
 	color: black;
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	text-decoration: none;
 }
 
 a:visited {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	color: white;
 =======
 	color: black;
 >>>>>>> goyoung
+=======
+	color: white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	text-decoration: none;
 }
 
 a:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	color: #F28A8A; /* 흰색 글씨로 변경 */
 	text-decoration: none; /* 밑줄 제거 */
 }
 
 .header_content {
     width: 100%;
+<<<<<<< HEAD
     height: 120px;
     background-color: black;
 =======
@@ -75,6 +97,10 @@ a:hover {
 	width: 100%;
 	height: 120px;
 >>>>>>> goyoung
+=======
+    height: 145px;
+    background-color: black;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .header_content ul li {
@@ -84,12 +110,17 @@ a:hover {
 }
 
 .header_content span {
+<<<<<<< HEAD
 	font-size: 10pt;
 <<<<<<< HEAD
 	color: white;
 =======
 	color: black;
 >>>>>>> goyoung
+=======
+	font-size: 12pt;
+	color: white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .inline-grid>* {
@@ -100,18 +131,28 @@ a:hover {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 .menu-bar__menu-box-1>ul>li {
 	width: calc(100%/ 7); /* 메뉴가 7개이니 전체 너비를 7로 나눈다 */
 }
 
 .menu_hover1 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	width: 99.9999%;
 	font-size: 14pt;
+=======
+	width: 99.9999%;
+	font-size: 14pt;
+	position: relative;
+	z-index: 2;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .menu_hover1:hover {
@@ -135,6 +176,7 @@ a:hover {
 .menu_hover2 li {
 	margin-bottom: 10px;
 	font-size: 12pt;
+<<<<<<< HEAD
 =======
 	width: 100%;
 
@@ -154,12 +196,17 @@ a:hover {
     margin-bottom: 10px;
     font-size: 12pt;
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .menu_hover2 div {
 	margin-top: 20px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 .menu_hover2_font {
 	font-size: 0.9em;
@@ -185,11 +232,16 @@ span:hover {
 </style>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+	<header>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	<!-- 메인 헤더 -->
 	<div class="header_content">
 		<div class="contents" align="center">
 			<ul class="memberInfo_wrap">
 				<li><a
+<<<<<<< HEAD
 					href="<%=root %>index.jsp"><img alt=""
 						src="<%=root%>/logoimg/logo.gif"
 						style="width: 16.5%; height: 9%; position: absolute; left: 41.2%; top:6%"></a></li>
@@ -212,6 +264,35 @@ span:hover {
 						src="<%=root%>/logoimg/4.png" alt=""
 						style="width: 20px; height: 20px; color: white; position: absolute; left: 92.2%; top: 6%;" /><br>
 					<span style="left: 91.7%; top: 10%;">고객센터</span></a></li>
+=======
+					href="<%=root %>/index.jsp?main=layout/main.jsp"><img alt=""
+						src="<%=root%>/logoimg/logo1.gif"
+						style="width: 430px; height: 200px; position: absolute; left: 40.5%; top: -15px;"></a></li>
+				<li><a
+					href=""><img
+						src="<%=root%>/logoimg/admin.png" alt=""
+						style="width: 25px; height: 25px; position: absolute; left: 76.12%; top: 6%;" /><br>
+					<span style="left: 75.6%; top: 10%;">Admin</span></a></li>
+				<li><a
+					href="<%=root%>/index.jsp?main=login/loginmain.jsp"><img
+						src="<%=root%>/logoimg/1.png" alt=""
+						style="width: 25px; height: 25px; position: absolute; left: 80%; top: 6%;" /><br>
+					<span style="left: 79.73%; top: 10%;">로그인</span></a></li>
+				<li><a
+					href="<%=root%>/index.jsp?main=member/memberaddform.jsp"><img
+						src="<%=root%>/logoimg/2.png" alt=""
+						style="width: 25px; height: 25px; position: absolute; left: 84.1%; top: 6%;" /><br>
+					<span style="left: 83.6%; top: 10%;">회원가입</span></a></li>
+				<li><a
+					href="<%=root%>/index.jsp?main=member/memebermypage.jsp"><img
+						src="<%=root%>/logoimg/3.png" alt=""
+						style="width: 25px; height: 25px; position: absolute; left: 88.35%; top: 6%;" /><br>
+					<span style="left: 87.62%; top: 10%;">MY INFO</span></a></li>
+				<li><a href=""><img
+						src="<%=root%>/logoimg/4.png" alt=""
+						style="width: 25px; height: 25px; color: white; position: absolute; left: 92.2%; top: 6%;" /><br>
+					<span style="left: 91.81%; top: 10%;">고객센터</span></a></li>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 			</ul>
 		</div>
 	</div>
@@ -234,7 +315,11 @@ span:hover {
 					<li class="nav-item"><a  href="#"
 						style="position: absolute; left: 40%; top: 10%"><b>극장</b></a></li>
 						
+<<<<<<< HEAD
 					<li class="nav-item"><a  href="<%=root %>/index.jsp?main=Movie_reserve/movielist.jsp"
+=======
+					<li class="nav-item"><a  href="<%=root%>/index.jsp?main=Movie_reserve/movielist.jsp"
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 						style="position: absolute; left: 46%; top: 10%"><b>예매</b></a></li>
 						
 					<li class="nav-item"><a  href="#"
@@ -249,12 +334,20 @@ span:hover {
 					<li class="nav-item">
 						<form class="form-inline my-2 my-md-0">
 							<input class="form-control" type="text"
+<<<<<<< HEAD
 								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;">
+=======
+								style="position:absolute; width: 12%; height: 60%; right: 8.5%; top: 13.5%;">
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 						</form>
 					</li>
 					<li class="nav-item"><a href=""><img
 							src="<%=root%>/logoimg/search1.png" alt=""
+<<<<<<< HEAD
 							style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;"/></a>
+=======
+							style="position:absolute; width: 1.25%; height: 55%; right:7%; top: 16%;"/></a>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 					</li>
 				</ul>
 			</div>
@@ -358,6 +451,7 @@ span:hover {
 		    });
 		});
 		</script>
+<<<<<<< HEAD
 </body>
 =======
 </style>
@@ -498,4 +592,8 @@ String root = request.getContextPath();
 		</script>
 	</body>
 >>>>>>> goyoung
+=======
+		</header>
+</body>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 </html>

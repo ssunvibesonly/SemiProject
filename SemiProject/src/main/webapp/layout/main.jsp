@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<%@page import="Dto.MovieDto"%>
+<%@page import="java.util.List"%>
+<%@page import="Dao.MovieDao"%>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -5,6 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <link
+<<<<<<< HEAD
 	href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap"
 	rel="stylesheet">
 <link
@@ -18,6 +25,20 @@
 <<<<<<< HEAD
 <script
 	src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+=======
+   href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap"
+   rel="stylesheet">
+<link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+   rel="stylesheet">
+<link rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script
+   src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <title>main</title>
 <%
 // 절대경로잡기
@@ -31,6 +52,7 @@ body {
 
 li {
 	list-style: none;
+<<<<<<< HEAD
 =======
 
 <title>찐 테스트</title>
@@ -39,12 +61,17 @@ li {
 	width: 100%;
 	height: 100%;
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	background: black;
 	/* 이미지들을 수평으로 배치 */
 	display: flex;
@@ -57,7 +84,11 @@ li {
 
 .swiper-slide img {
 	width: 100%;
+<<<<<<< HEAD
 	max-width: 175px;
+=======
+	max-width: 225px;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	height: auto;
 	border-radius: 10px;
 	margin: 30px 50px 0px 50px;
@@ -68,6 +99,7 @@ li {
 	position: relative;
 	/* 내용이 넘칠 경우 숨김 */
 	overflow: hidden;
+<<<<<<< HEAD
 =======
 	background: #fff;
 	/* 요소 내부의 내용을 수직 중앙 정렬하는 스타일 설정 */
@@ -92,11 +124,16 @@ li {
 .swiper-button-prev {
 	opacity: 0.1; /*투명도 조절 */
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .video-wrap {
 	position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	/* 내용이 넘칠 경우 숨김 */
 	overflow: hidden;
 	margin-bottom: -10px;
@@ -117,6 +154,7 @@ li {
 
 .blind {
 	width: 10%;
+<<<<<<< HEAD
 	height: 100%;
 	position: absolute;
 	z-index: 1;
@@ -136,11 +174,21 @@ li {
 	color: white; /* 텍스트 색상을 흰색으로 설정 */
 	
 >>>>>>> goyoung
+=======
+	height: 80%;
+	position: absolute;
+	z-index: 1;
+	top: 70%;
+	right: 0%;
+	background-color: black;
+	margin-right: 10px;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #videoname1 {
 	font-size: 25pt;
 	position: absolute;
+<<<<<<< HEAD
 <<<<<<< HEAD
 	top: 60%;
 	left: 24%;
@@ -148,14 +196,23 @@ li {
 	top: 300px;
 	left: 150px;
 >>>>>>> goyoung
+=======
+	top: 60%;
+	left: 30%;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #videoname2 {
 	font-size: 13pt;
 	position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	top: 70%;
 	left: 24%;
+=======
+	top: 70%;
+	left: 30%;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #btnall1 {
@@ -211,29 +268,41 @@ li {
 	position: relative;
 	left: 13.4%;
 	right: 13.4%;
+<<<<<<< HEAD
 =======
 	top: 400px;
 	left: 150px;
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #moviechart1 {
 	text-decoration: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	color: white;
 	z-index: 2;
 	margin-top: -5px;
 	width: 150px;
+<<<<<<< HEAD
 =======
 	color: black;
 	position: absolute;
 	left: 70px;
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #futuremovie1 {
 	text-decoration: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	color: silver;
 	z-index: 2;
 	font-weight: normal;
@@ -272,6 +341,13 @@ h5, h6 {
 	background-color: white;
 }
 
+<<<<<<< HEAD
+=======
+#swiper-btn1>a {
+	color: black;
+}
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 #swiper-btn2 {
 	margin-top: 2px;
 	background-color: #DF3E49;
@@ -284,7 +360,11 @@ h5, h6 {
 	left: 13.2%;
 	width: 73.6%;
 	top: 54%;
+<<<<<<< HEAD
 	height: 42%;
+=======
+	height: 45%;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .special_special {
@@ -353,6 +433,13 @@ h5, h6 {
     display: none;  /* 초기에는 숨김 */
 }
 
+<<<<<<< HEAD
+=======
+.fixedbtn1:hover{
+	color: white;
+}
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 .fixedbtn2 {
     position: fixed;
     width: 60px;
@@ -380,10 +467,24 @@ h5, h6 {
 
 </style>
 <body>
+<<<<<<< HEAD
 	<!-- 고정 버튼 -->
 	
 	<!-- 예매하기 버튼 -->
 	<a href="#" class="fixedbtn1">예매하기</a>
+=======
+<%
+MovieDao dao = new MovieDao();
+
+List <MovieDto> list=dao.getAllMovies();
+
+%>
+
+	<!-- 고정 버튼 -->
+	
+	<!-- 예매하기 버튼 -->
+	<a href="<%=root%>/index.jsp?main=Movie_reserve/movielist.jsp" class="fixedbtn1">예매하기</a>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	
 	<!-- 상단바 이동 -->
 	<a href="#" class="fixedbtn2">
@@ -393,10 +494,15 @@ h5, h6 {
 	<script>
 	// 고정 버튼을 가져옵니다.
 	var fixedBtn1 = document.querySelector(".fixedbtn1");
+<<<<<<< HEAD
 	fixedBtn1.style.transition = "1s";
 
 	var fixedBtn2 = document.querySelector(".fixedbtn2");
 	fixedBtn2.style.transition = "1s";
+=======
+
+	var fixedBtn2 = document.querySelector(".fixedbtn2");
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 	// 스크롤 이벤트를 감지하는 함수
 	function handleScroll() {
@@ -408,11 +514,20 @@ h5, h6 {
 
 	    // 스크롤 위치가 헤더 높이보다 큰 경우 버튼을 표시합니다.
 	    if (scrollY > headerHeight) {
+<<<<<<< HEAD
 	        fixedBtn1.style.display = "block"; // 버튼을 표시
 	        fixedBtn2.style.display = "block"; // 버튼을 표시
 	    } else {
 	        fixedBtn1.style.display = "none"; // 버튼을 숨김
 	        fixedBtn2.style.display = "none"; // 버튼을 숨김
+=======
+	        // 버튼을 표시하고 애니메이션 적용
+	        $(fixedBtn1).fadeIn(1000);
+	        $(fixedBtn2).fadeIn(1000);
+	    } else {
+	    	$(fixedBtn1).fadeOut(1000);
+	    	$(fixedBtn2).fadeOut(1000);
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	    }
 	}
 
@@ -438,6 +553,7 @@ h5, h6 {
 				allowfullscreen></iframe>
 
 		</div>
+<<<<<<< HEAD
 =======
 	color: black;
 	position: absolute;
@@ -488,12 +604,17 @@ if (request.getParameter("main") != null) {
 			<source src="<%=root%>/image/opvideo2.mp4" type="video/mp4">
 		</video>
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	</div>
 
 	<div class="movie chart wrap">
 		<div class="content">
 			<div class="btnwrap">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 				<h4>
 					<a href="#" id="moviechart1"><i
 						class="bi bi-bar-chart-line-fill"></i> 무비차트</a>
@@ -507,6 +628,7 @@ if (request.getParameter("main") != null) {
 			<!-- Swiper -->
 			<div class="swiper mySwiper">
 				<div class="swiper-wrapper">
+<<<<<<< HEAD
 =======
 				<h3>
 					<a href="#" id="moviechart1"><i
@@ -539,11 +661,31 @@ if (request.getParameter("main") != null) {
 								</h5>
 								<h6 style="color: white; font-size: 0.85em;">좋아요
 									99%&nbsp;예매율 56%</h6>
+=======
+					<div class="swiper-slide">
+						<%
+						for (int i = 0; i < 10; i++) {
+						MovieDto dto = list.get(i);
+						%>
+						<div class="1page" align="center">
+							<div style="position: relative; margin-top: 10px;">
+								<!-- position 속성 추가 -->
+								<img src="<%=dto.getMv_poster() %>"><br>
+								<h5 style="color: white; font-size: 0.95em; margin-top: 15px;"><%=i+1%>. <%=dto.getMv_title() %>
+								</h5>
+								
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 								<div class="hover-buttons"
 									style="position: absolute; bottom: 43%; left: 50%; transform: translateX(-50%); display: none;">
 									<!-- 상세보기 버튼 -->
 									<button class="swiper-btn btn btn-right" data-movie-id="<%=i%>"
+<<<<<<< HEAD
 										id="swiper-btn1">상세보기</button>
+=======
+										id="swiper-btn1">
+										<a href="index.jsp?main=/layout/detail.jsp&mv_no=<%=dto.getMv_no() %>">상세보기</a>
+										</button>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 									<!-- 예매하기 버튼 -->
 									<button class="swiper-btn btn btn-right" data-movie-id="<%=i%>"
 										id="swiper-btn2">예매하기</button>
@@ -569,6 +711,7 @@ if (request.getParameter("main") != null) {
 								});
 							});
 						</script>
+<<<<<<< HEAD
 =======
 						<div class="1page container" align="center">
 							<img src="<%=root%>/image/movie<%=i%>.jpeg"><br>
@@ -582,10 +725,22 @@ if (request.getParameter("main") != null) {
 						%>
 					</div>
 <<<<<<< HEAD
+=======
+						<%
+						 if ((i+1) % 5 == 0) {
+						%>
+					</div>
+					<div class="swiper-slide">
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 					<%
 					}
 					}
 					%>
+<<<<<<< HEAD
+=======
+					</div>
+					</div>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 					<div style="width: 100%; height: 450px;"
 						class="special_hall">
@@ -610,10 +765,32 @@ if (request.getParameter("main") != null) {
 					</div>
 					
 					<script>
+<<<<<<< HEAD
 					$(document).ready(function() {
 				        // 페이지가 로드될 때 초기 이미지 설정
 				        var defaultText = "SUITE CINEMA"; // 디폴트로 보여줄 텍스트
 				        var defaultImageUrl = "<img src='<%=root%>/image/special1.png'>"; // 디폴트 이미지 경로 설정
+=======
+					//슬라이드 페이지 넘어가는 버튼 및 슬라이드 효과 
+					var swiper = new Swiper(".mySwiper", {
+						spaceBetween : 30,
+						centeredSlides : true,
+
+						pagination : {
+							el : ".swiper-pagination",
+							clickable : true,
+						},
+						navigation : {
+							nextEl : ".swiper-button-next",
+							prevEl : ".swiper-button-prev",
+						},
+					});
+					
+					$(document).ready(function() {
+				        // 페이지가 로드될 때 초기 이미지 설정
+				        var defaultText = "SUITE CINEMA"; // 디폴트로 보여줄 텍스트
+				        var defaultImageUrl = "<img src='<%=root%>/image/special5.png'>"; // 디폴트 이미지 경로 설정
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 				        // 디폴트 이미지를 special_result 요소에 추가
 				        $(".special_result").html(defaultImageUrl);
@@ -666,6 +843,7 @@ if (request.getParameter("main") != null) {
 				    });
 					</script>
 				</div>
+<<<<<<< HEAD
 			</div>
 		</div>
 	</div>
@@ -715,5 +893,12 @@ if (request.getParameter("main") != null) {
 		});
 	</script>
 >>>>>>> goyoung
+=======
+			
+		</div>
+	</div>
+
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 </body>
 </html>

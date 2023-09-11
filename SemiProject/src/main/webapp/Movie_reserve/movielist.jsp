@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%@page import="Dto.MovieDto"%>
 <%@page import="Dao.MovieDao"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.TreeSet"%>
 <%@page import="java.util.Collections"%>
+<<<<<<< HEAD
 =======
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Random"%>
 <%@page import="java.util.Vector"%>
@@ -20,6 +26,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gamja+Flower&family=Nanum+Pen+Script&family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <title>영화예매</title>
 =======
@@ -109,10 +116,23 @@ overflow: scroll;
 width:343px;
 height:500px;
 >>>>>>> goyoung
+=======
+<title>영화예매</title>
+<style>
+
+#mv_name{
+float:left;
+border:2px solid gray;
+width:350px;
+height:500px;
+overflow: scroll;
+background-color:white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 }
 #mv_theater{
 
+<<<<<<< HEAD
 position:absolute;
 border:2px solid gray;
 top:200px;
@@ -124,11 +144,19 @@ left:543px;
 width:345px;
 >>>>>>> goyoung
 height:500px;
+=======
+float:left;
+border:2px solid gray;
+width:340px;
+height:500px;
+background-color:white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 }
 
 #mv_day{
 
+<<<<<<< HEAD
 position:absolute;
 border:2px solid gray;
 <<<<<<< HEAD
@@ -156,11 +184,27 @@ top:200px;
 width:342px;
 >>>>>>> goyoung
 height:500px;
+=======
+border:2px solid gray;
+float:left;
+width:195px;
+height:500px;
+background-color:white;
+
+}
+#mv_time{
+border:2px solid gray;
+float:left;
+width:340px;
+height:500px;
+background-color:white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 }
 
 .table{
 
+<<<<<<< HEAD
 position:absolute;
 top:150px;
 left:200px;
@@ -171,10 +215,17 @@ width:1225px;
 =======
 width:1200px;
 >>>>>>> goyoung
+=======
+text-align:center;
+width:1225px;
+
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 #select_info{
 
+<<<<<<< HEAD
 position:absolute;
 border:2px solid gray;
 top:750px;
@@ -182,21 +233,38 @@ left:200px;
 width:1200px;
 <<<<<<< HEAD
 height:300px;
+=======
+border:5px solid orange;
+width:1225px;
+height:300px;
+background-color:white;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 li{list-style: none;}
 
+<<<<<<< HEAD
 div.container{
+=======
+div.daycon{
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
    overflow: scroll;
     border:solid 1px green;
     height: 100px;
     width: 200px;
 }
 li.date{
+<<<<<<< HEAD
 font-size:15pt;
 text-align: center;
 margin-left: -20px; 
 margin-top: -27px;
+=======
+
+font-size:15pt;
+text-align: center;
+margin-left: -10px; 
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 cursor: pointer;
 }
 
@@ -206,6 +274,7 @@ li.mvname{
 
 div.poster{
  
+<<<<<<< HEAD
  width:200px;
  height:250px;
  position:absolute;
@@ -217,6 +286,16 @@ div.mvinfo{
 position:absolute;
 top:25px;
 left:250px;
+=======
+ margin-top:20px;
+ margin-left:10px;
+ width:250px;
+ height:250px;
+}
+
+div.mvinfo{
+margin-top:20px;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 width:250px;
 height:100px;
 
@@ -234,7 +313,11 @@ height:100px;
 
 #nextseat{
 
+<<<<<<< HEAD
 position: absolute;
+=======
+position: relative;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 right: 100px;
 }
@@ -296,7 +379,11 @@ List<MovieDto> list=dao.getAllMovieInfo();
           var name=$(this).text();
           
           $(".mvname").removeClass("clickcolor");
+<<<<<<< HEAD
 		  $(this).addClass("clickcolor");
+=======
+        $(this).addClass("clickcolor");
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
           
           $("#mvage").attr("src",src).css("width","40px");
           $("#poster").html(poster);
@@ -308,9 +395,15 @@ List<MovieDto> list=dao.getAllMovieInfo();
           var locname=$(this).text();
           
           $(".loca").removeClass("clickcolor");
+<<<<<<< HEAD
 		  $(this).addClass("clickcolor");
 		  
 		  
+=======
+        $(this).addClass("clickcolor");
+        
+        
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
           //alert(locname);
           $("#mvcinema").html(locname);
        })
@@ -325,8 +418,13 @@ List<MovieDto> list=dao.getAllMovieInfo();
         day = $(this).attr("day");//요일
         
         $("li.date").removeClass("clickcolor");
+<<<<<<< HEAD
 		  $(this).addClass("clickcolor");
 		  
+=======
+        $(this).addClass("clickcolor");
+        
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
         //alert(date);
         //alert(day);
         $.ajax({
@@ -346,9 +444,15 @@ List<MovieDto> list=dao.getAllMovieInfo();
                  var timeSplit=timeString.split(':');
                  
                  if(timeSplit[0]>=12){
+<<<<<<< HEAD
                     after+="<button type='button' class='btn btn-outline-warning time'  value='"+item.time+"'>"+item.time+"</button>&nbsp;";
                  }else{
                     morning+="<button type='button' class='btn btn-outline-warning time'  value='"+item.time+"'>"+item.time+"</button>&nbsp;";
+=======
+                    after+="<button type='button' class='btn btn-warning time'  value='"+item.time+"'>"+item.time+"</button>&nbsp;";
+                 }else{
+                    morning+="<button type='button' class='btn btn-warning time'  value='"+item.time+"'>"+item.time+"</button>&nbsp;";
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
                  }
               });
               if(morning!=""){
@@ -437,6 +541,7 @@ List<MovieDto> list=dao.getAllMovieInfo();
 
 </head>
 <body>
+<<<<<<< HEAD
 
 <table class="table table-bordered">
    <tr>
@@ -450,6 +555,20 @@ List<MovieDto> list=dao.getAllMovieInfo();
 
 <div id="mv_name"><br>
 
+=======
+<div class="container">
+<table class="table table-bordered" style="width:1225px;" align="center">
+   <tr>
+      <th style="width:280px;">영화</th>
+      <th style="width:280px;">극장</th>
+      <th style="width:150px;">날짜</th>
+      <th style="width:280px;">시간</th>
+   </tr>
+</table>
+
+<div class="container" >
+<div id="mv_name" ><br>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <ul>
 
 <%
@@ -483,21 +602,31 @@ for(int i=0; i<list.size();i++){
    %>
    
    <li class="mvname" photo="<img src='<%=mv_dto.getMv_poster()%>' style='width:200px;height:250px;'>">
+<<<<<<< HEAD
    <img src="../image/<%=photo %>" class="agelogo" style="width: 30px;">&nbsp;&nbsp;<%=mv_dto.getMv_title()%></li><br>
+=======
+   <img src="image/<%=photo %>" class="agelogo" style="width: 30px;">&nbsp;&nbsp;<%=mv_dto.getMv_title()%></li><br>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
    
 <%}%>
 </ul>
 
 </div>
 
+<<<<<<< HEAD
 <div id="mv_theater">
 <table class="table table-bordered" style="width:100px;position: absolute;top: 10px;left:10px;">
+=======
+<div id="mv_theater"style="float:left;">
+<table class="table table-bordered" style="width:100px;border: 5px solid orange;float: left;">
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%
 String [] local={"서울","경기","인천","강원","대전","대구","부산","경상","전라"};
 String [] localEng={"seoul","gyeonggi","incheon","gangwon","daejeon","daegu","busan","gyeongsang","jeonla"};
 
 for(int a=0;a<local.length;a++){%>
    <tr><th class="local" style="cursor: pointer;" value="<%=localEng[a] %>"><%=local[a] %></th></tr>
+<<<<<<< HEAD
 =======
 height:200px;
 
@@ -550,6 +679,8 @@ String [] local={"서울","경기","인천","강원","대전","대구","부산",
 for(int a=0;a<local.length;a++){%>
 	<tr><th class="local" style="cursor: pointer;"><%=local[a] %></th></tr>
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
  
 <% }%></table><%
 
@@ -561,6 +692,7 @@ String[] daejeon={"논산","당진","대전","대전가오","대전탄방","대�
 String[] daegu={"대구","대구수성","대구스타디움","대구아카데미","대구연경","대구월성","대구죽전"};
 String[] busan={"대연","동래","부산명지","서면","서면삼정타워","아시아드","울산동구","울산삼산"};
 String[] gyeongsang={"거제","경산","고성","구미","김천율곡","김해","김해율하","김해장유","마산","안동","창원"};
+<<<<<<< HEAD
 <<<<<<< HEAD
 String[] jeonla={"광양","광주금남로","광주상무","광주용봉","광주첨단","광주터미널","광주하남","나주","목포","서전주"};%>
 
@@ -574,10 +706,18 @@ String[] jeju={"광양","광주금남로","광주상무","광주용봉","광주�
 for(int seo=0;seo<seoul.length;seo++){%>
 	<tr><td><%=seoul[seo] %></td></tr>
 >>>>>>> goyoung
+=======
+String[] jeonla={"광양","광주금남로","광주상무","광주용봉","광주첨단","광주터미널","광주하남","나주","목포","서전주"};%>
+
+<table class="table table-bordered seoul loc"style="width:200px;"><% 
+for(int seo=0;seo<seoul.length;seo++){%>
+   <tr><td class="loca"><%=seoul[seo] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered gyeonggi loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int gye=0;gye<gyeonggi.length;gye++){%>
@@ -587,10 +727,16 @@ for(int gye=0;gye<gyeonggi.length;gye++){%>
 for(int gye=0;gye<gyeonggi.length;gye++){%>
 	<tr><td><%=gyeonggi[gye] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered gyeonggi loc"style="width:200px;"><% 
+for(int gye=0;gye<gyeonggi.length;gye++){%>
+   <tr><td class="loca"><%=gyeonggi[gye] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered incheon loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int in=0;in<incheon.length;in++){%>
@@ -600,10 +746,16 @@ for(int in=0;in<incheon.length;in++){%>
 for(int in=0;in<incheon.length;in++){%>
 	<tr><td><%=incheon[in] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered incheon loc"style="width:200px;"><% 
+for(int in=0;in<incheon.length;in++){%>
+   <tr><td class="loca"><%=incheon[in] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered gangwon loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int gang=0;gang<gangwon.length;gang++){%>
@@ -613,10 +765,16 @@ for(int gang=0;gang<gangwon.length;gang++){%>
 for(int gang=0;gang<gangwon.length;gang++){%>
 	<tr><td><%=gangwon[gang] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered gangwon loc"style="width:200px;"><% 
+for(int gang=0;gang<gangwon.length;gang++){%>
+   <tr><td class="loca"><%=gangwon[gang] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered daejeon loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int dae=0;dae<daejeon.length;dae++){%>
@@ -626,10 +784,16 @@ for(int dae=0;dae<daejeon.length;dae++){%>
 for(int dae=0;dae<daejeon.length;dae++){%>
 	<tr><td><%=daejeon[dae] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered daejeon loc"style="width:200px;"><% 
+for(int dae=0;dae<daejeon.length;dae++){%>
+   <tr><td class="loca"><%=daejeon[dae] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered daegu loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int daeg=0;daeg<daegu.length;daeg++){%>
@@ -639,10 +803,16 @@ for(int daeg=0;daeg<daegu.length;daeg++){%>
 for(int daeg=0;daeg<daegu.length;daeg++){%>
 	<tr><td><%=daegu[daeg] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered daegu loc"style="width:200px;"><% 
+for(int daeg=0;daeg<daegu.length;daeg++){%>
+   <tr><td class="loca"><%=daegu[daeg] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered busan loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int bu=0;bu<busan.length;bu++){%>
@@ -652,10 +822,16 @@ for(int bu=0;bu<busan.length;bu++){%>
 for(int bu=0;bu<busan.length;bu++){%>
 	<tr><td><%=busan[bu] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered busan loc"style="width:200px;"><% 
+for(int bu=0;bu<busan.length;bu++){%>
+   <tr><td class="loca"><%=busan[bu] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered gyeongsang loc"style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int gs=0;gs<gyeongsang.length;gs++){%>
@@ -665,10 +841,16 @@ for(int gs=0;gs<gyeongsang.length;gs++){%>
 for(int gs=0;gs<gyeongsang.length;gs++){%>
 	<tr><td><%=gyeongsang[gs] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered gyeongsang loc"style="width:200px;"><% 
+for(int gs=0;gs<gyeongsang.length;gs++){%>
+   <tr><td class="loca"><%=gyeongsang[gs] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
 </table>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table class="table table-bordered jeonla loc" style="position: absolute;left: 120px;width:200px;top:10px;"><% 
 for(int jeon=0;jeon<jeonla.length;jeon++){%>
@@ -678,6 +860,11 @@ for(int jeon=0;jeon<jeonla.length;jeon++){%>
 for(int je=0;je<jeju.length;je++){%>
 	<tr><td><%=jeju[je] %></td></tr>
 >>>>>>> goyoung
+=======
+<table class="table table-bordered jeonla loc" style="width:200px;"><% 
+for(int jeon=0;jeon<jeonla.length;jeon++){%>
+   <tr><td class="loca"><%=jeonla[jeon] %></td></tr>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%}
 
 %>
@@ -686,10 +873,17 @@ for(int je=0;je<jeju.length;je++){%>
 
 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div id="mv_day" class="container">
 <ul>
    <li style="color: gray; margin-top: 10px;margin-left: 35px;"><b>2023</b></li>
    <li><b style="font-size: 40pt;text-align: center;margin-left: 35px;">9</b></li><br>
+=======
+<div id="mv_day" class="container daycon">
+<ul>
+   <li style="color: gray; margin-top: 10px;margin-left: 35px;"><b>2023</b></li>
+   <li><b style="font-size: 40pt;text-align: center;margin-left: 35px;">9</b></li>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%
 for(int i=1;i<=30;i++){
 
@@ -705,12 +899,20 @@ for(int i=1;i<=30;i++){
    case 0:dayOfweek="목";break;
    
    }%>
+<<<<<<< HEAD
    <span style="color: <%=i%7==2?"blue":i%7==3?"red":"black"%>;"><%=dayOfweek%></span>
+=======
+   <li style="color: <%=i%7==2?"blue":i%7==3?"red":"black"%>;"><%=dayOfweek%></li><br>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
    <lable class="datelabel"><li style="color: <%=i%7==2?"blue":i%7==3?"red":"black"%>;" class="date" value=<%=i %> day="<%=dayOfweek %>">
          <b><%= i%></b>
       </li>
       </lable>
+<<<<<<< HEAD
    <br>
+=======
+   
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 <% 
 
@@ -720,6 +922,7 @@ for(int i=1;i<=30;i++){
 
 </div>
 
+<<<<<<< HEAD
 <div id="mv_time" class="mvtime" >
 <div style="position: absolute;top:10px;left: 10px;">
 </div>
@@ -737,6 +940,24 @@ for(int i=1;i<=30;i++){
 <span>관람연령</span>&nbsp;<img src="" id="mvage">
 </div>
 
+=======
+<div id="mv_time" class="mvtime" ></div>
+</div>
+
+<div class="container">
+<div id="select_info" class="container" style="clear: both;">
+
+<div class="poster" id="poster" style="float: left;"></div>
+
+<div class="mvinfo" style="float: left;">
+영화명<b id="mvtitle" class="mvtitle"></b>
+<br><br>
+관람연령&nbsp;<img src="" id="mvage">
+</div>
+
+
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <span style="border: 1px solid gray;height:250px;position: absolute;top: 25px;left: 410px;" ></span>
 
 
@@ -755,6 +976,7 @@ for(int i=1;i<=30;i++){
 <input type="button" value="좌석선택" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
 </div>
 
+<<<<<<< HEAD
 </form>
 =======
 <div id="mv_day"></div>
@@ -781,5 +1003,9 @@ System.out.println(timelist.get(random));
 
 >>>>>>> goyoung
 
+=======
+</div>
+</div>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 </body>
 </html>

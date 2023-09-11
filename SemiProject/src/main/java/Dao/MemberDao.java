@@ -8,10 +8,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Dto.MemberDto;
+<<<<<<< HEAD
 import mysql.db.DBConnect_2;
 
 public class MemberDao {
 DBConnect_2 db=new DBConnect_2();
+=======
+import mysql.db.DBConnect;
+
+public class MemberDao {
+
+	DBConnect db=new DBConnect();
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	
 	//아이디존재하면 true
 	
@@ -303,4 +311,8 @@ DBConnect_2 db=new DBConnect_2();
 			db.dbClose(pstmt, conn);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7

@@ -42,17 +42,29 @@ body {
 .contents1>a {
 	text-decoration: none;
 	color: white;
+<<<<<<< HEAD
 	font-size: 0.8em;
+=======
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .contents1>h6 {
 	color: white;
+<<<<<<< HEAD
 	font-size: 0.8em;
+=======
+
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .contents1>h6>a {
 	color: white;
+<<<<<<< HEAD
 	font-size: 0.7em;
+=======
+	font-size: 0.9em;
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 
 .contents1>a:hover {
@@ -78,7 +90,10 @@ body {
 
 .contents2>a{
 	font-weight: bold;
+<<<<<<< HEAD
 	font-size: 0.8em;
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 }
 </style>
 </head>
@@ -86,13 +101,21 @@ body {
 String root = request.getContextPath();
 %>
 <body>
+<<<<<<< HEAD
 
+=======
+	<footer>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 
 	<!-- 푸터 -->
 	<div class="footer_content1">
 		<div class="gwang-go content1">
 			<img src="<%=root%>/image/mack.jpeg" name="mack" id="mack"
+<<<<<<< HEAD
 				style="height: 500px;"
+=======
+				style="width: 100%; height: 500px; margin-top: 40px;"
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 				onclick="location.href='https://www.mcdonalds.co.kr/kor/main.do'">
 		</div>
 		<div class="contents1" align="center">
@@ -110,7 +133,11 @@ String root = request.getContextPath();
 			<h6>
 				대표이사 : 장순녕&nbsp;사업자등록번호 : 114-02-34678&nbsp;통신판매업신고번호 :
 				2023-서울부산-1955&nbsp; <a href="https://www.youtube.com/@goyoungii"><b
+<<<<<<< HEAD
 					style="font-size: 1.45em;">사업자정보확인</b></a>
+=======
+					style="font-size: 1.1em;">사업자정보확인</b></a>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 			</h6>
 			<h6>호스팅사업자: SY네트워크&nbsp; 개인정보보호 책임자 : 쌍용구&nbsp;대표이메일 :
 				gitmasterx@sy.net</h6>
@@ -119,4 +146,8 @@ String root = request.getContextPath();
 			</h6>
 		</div>
 	</div>
+<<<<<<< HEAD
+=======
+	</footer>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 </body>

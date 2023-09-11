@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <title>영화 그 이상의 감동 '3'CINE 입니다</title>
 =======
 <style type="text/css">
@@ -16,6 +17,9 @@
 <title>영화 그 이상의 감동 '3'CINE 입니다</title>
 </head>
 >>>>>>> goyoung
+=======
+<title>영화 그 이상의 감동 '3'CINE 입니다</title>
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 <%
 	//절대경로잡기
 	String root=request.getContextPath();
@@ -30,6 +34,7 @@
 	}
 %>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </head>
 <style type="text/css">
 .layout{
@@ -37,11 +42,18 @@
 
 .header{
 	position: absolute;
+=======
+</head>
+<style type="text/css">
+
+.header{
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	width: 100%;
 	height: 100%;
 }
 
 .main{
+<<<<<<< HEAD
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -56,6 +68,18 @@
 }
 </style>
 <body background="color: black;">
+=======
+	width: 100%;
+	height: 100%;
+}
+
+.footer{
+	width: 100%;
+	height: 100%;
+}
+</style>
+<body style="background-color: black;">
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	
 	<div class="layout header">
 		<jsp:include page="layout/header.jsp"/>
@@ -67,6 +91,7 @@
 	
 	<div class="layout footer">
 		<jsp:include page="layout/footer.jsp"/>
+<<<<<<< HEAD
 =======
 <body>
 	<div class="layout header">
@@ -76,6 +101,8 @@
 	<div class="layout main">
 		<jsp:include page="layout/main.jsp"/>
 >>>>>>> goyoung
+=======
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 	</div>
 </body>
 </html>

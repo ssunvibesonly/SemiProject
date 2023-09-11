@@ -6,10 +6,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import Dto.ReservationDto;
+<<<<<<< HEAD
 import mysql.db.DBConnect_2;
 
 public class ReservationDao {
    DBConnect_2 db = new DBConnect_2();
+=======
+import mysql.db.DBConnect;
+
+public class ReservationDao {
+   DBConnect db = new DBConnect();
+>>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
    
    //insert
    public void insertReservation(ReservationDto dto) {

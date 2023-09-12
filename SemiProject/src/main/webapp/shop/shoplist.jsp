@@ -1,3 +1,6 @@
+<%@page import="Dto.ShopDto"%>
+<%@page import="java.util.List"%>
+<%@page import="Dao.ShopDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +14,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <title>Insert title here</title>
 </head>
+<%
+ShopDao dao=new ShopDao();
+List<ShopDto> list=dao.getAllData();
+
+%>
+
 <style>
 .indexcolor{
 color: white;
@@ -47,11 +56,61 @@ color: white;
   <div class="tab-content">
     <div id="home" class="container tab-pane active"><br>
       <h3 class="indexcolor">전체 보기</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+		<div align="center">
+			
+				<%
+				for(int i=0;i<list.size();i++){
+					ShopDto dto=list.get(i);
+					%>
+					
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
+					href="#"><div style="float: left;">
+					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
+					<h4><%=dto.getShop_sangpum() %></h4>
+					<h5><%=dto.getShop_detail() %></h5>
+					<h6><%=dto.getShop_price() %>원</h6>
+					</div></a>
+				<%
+				if(i%4==0){
+				%>
+					
+					<br>
+				<%}
+				
+				}
+
+				%>
+		</div>
     </div>
     <div id="menu1" class="container tab-pane fade"><br>
       <h3 class="indexcolor">패키지</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div align="center">
+			
+				<%
+				for(int i=0;i<list.size();i++){
+					ShopDto dto=list.get(i);
+					if(dto.getShop_category().equals("패키지")){%>
+					
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
+					href="#"><div style="float: left;">
+					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
+					<h4><%=dto.getShop_sangpum() %></h4>
+					<h5><%=dto.getShop_detail() %></h5>
+					<h6><%=dto.getShop_price() %>원</h6>
+					</div></a>
+
+					<%}
+				if(i%4==0){
+				%>
+					
+					<br>
+				<%}
+				
+				}
+
+				%>
+		</div>
     </div>
     <div id="menu2" class="container tab-pane fade"><br>
       <h3 class="indexcolor">팝콘</h3>

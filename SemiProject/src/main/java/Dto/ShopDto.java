@@ -8,7 +8,7 @@ public class ShopDto {
 	private String shop_sangpum;
 	private String shop_detail;
 	private String shop_photo;
-	private String shop_price;
+	private int shop_price;
 	private Timestamp shop_ipgoday;
 	
 	public String getShop_num() {
@@ -41,16 +41,17 @@ public class ShopDto {
 	public void setShop_photo(String shop_photo) {
 		this.shop_photo = shop_photo;
 	}
-	public String getShop_price() {
-		return shop_price;
-	}
-	public void setShop_price(String shop_price) {
-		this.shop_price = shop_price;
-	}
+
 	public Timestamp getShop_ipgoday() {
 		return shop_ipgoday;
 	}
 	public void setShop_ipgoday(Timestamp shop_ipgoday) {
 		this.shop_ipgoday = shop_ipgoday;
+	}
+	public int getShop_price() {
+		return shop_price;
+	}
+	public void setShop_price(int shop_price) {
+		this.shop_price = shop_price;
 	}
 }

@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="Dao.MovieDao"%>
+<%@page import="Dto.MovieDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,6 +17,13 @@
 <%
 //절대경로잡기
 String root = request.getContextPath();
+
+MovieDao dao=new MovieDao();
+MovieDto dto=new MovieDto();
+String search=request.getParameter(dto.getMv_title());
+
+
+
 %>	
 <style type="text/css">
 body{
@@ -154,7 +164,7 @@ span:hover {
 						src="<%=root%>/logoimg/3.png" alt=""
 						style="width: 22px; height: 22px; position: absolute; left: 88.35%; top: 6%;" /><br>
 					<span style="left: 87.22%; top: 10%;">MY INFO</span></a></li>
-				<li><a href=""><img
+				<li><a href="<%=root%>/index.jsp?main=shop/addform.jsp"><img
 						src="<%=root%>/logoimg/4.png" alt=""
 						style="width: 22px; height: 22px; color: white; position: absolute; left: 92.75%; top: 6%;" /><br>
 					<span style="left: 91.81%; top: 10%;">고객센터</span></a></li>
@@ -192,16 +202,20 @@ span:hover {
 					<li class="nav-item"><a  href="#"
 						style="position: absolute; left: 64%; top: 10%"><b>혜택</b></a></li>
 					
+					<form method="post" action="index.jsp?main=movieadmin/searchresult.jsp?search="+<%=search%>>
+
 					<li class="nav-item">
-						<form class="form-inline my-2 my-md-0">
-							<input class="form-control" type="text"
-								style="position:absolute; width: 12%; height: 60%; right: 8.5%; top: 13.5%;">
-						</form>
+						<input type="hidden" name="mv_name" value="<%=dto.getMv_title() %>">
+						
+						<input type="text" class="form-control" name="search">
+						<input type="image" src="logoimg/search1.png" style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;">
+						
 					</li>
-					<li class="nav-item"><a href=""><img
-							src="<%=root%>/logoimg/search1.png" alt=""
-							style="position:absolute; width: 1.25%; height: 55%; right:7%; top: 16%;"/></a>
+					<li class="nav-item">
+					
+		
 					</li>
+					</form>
 				</ul>
 			</div>
 		</nav>

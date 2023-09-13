@@ -100,4 +100,38 @@ public class ShopDao {
 		}
 	}
 	
+	//수정 클릭 시 num에 따른 값 가져옥
+	public ShopDto getData(String num) {
+		
+		ShopDto dto=new ShopDto();
+		
+		Connection conn=db.getConnection();
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		
+		String sql="select * from shop whre shop_num=?";
+		
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, num);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {
+				
+				dto.setShop_category(rs.getString("shop_category"));
+				dto.setShop_sangpum(rs.getString("shop_sangpum"));
+				dto.setShop_detail(rs.getString("shop_detail"));
+				dto.setShop_photo(rs.getString("shop_photo"));
+				dto.setShop_price(rs.getInt("shop_price"));
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return dto;
+	}
+	
 }

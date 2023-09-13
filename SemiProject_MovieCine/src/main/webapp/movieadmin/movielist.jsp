@@ -25,6 +25,7 @@ img.photo{
 <%
 MovieDao dao=new MovieDao();
 List<MovieDto> list=dao.getAllMovies();
+
 %>
 
 <div class="container mt-3">

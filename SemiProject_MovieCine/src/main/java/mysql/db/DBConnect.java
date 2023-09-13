@@ -9,11 +9,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DBConnect {
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 
+public class DBConnect {
+	
 	//url	
 	static final String mysql_URL="jdbc:mysql://semi.cghngf9gqw71.eu-north-1.rds.amazonaws.com:3306/semi?serverTimezone=Asia/Seoul";
-
+	
 	//driver
 	String driver="com.mysql.cj.jdbc.Driver";
 	public DBConnect() {
@@ -22,7 +24,7 @@ public class DBConnect {
 			System.out.println("Mysql 드라이버 성공!!!");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace();	
 			System.out.println("Mysql 드라이버 실패!!!");
 		}
 	}

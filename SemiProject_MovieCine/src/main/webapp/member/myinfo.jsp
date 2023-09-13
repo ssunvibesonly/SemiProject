@@ -85,7 +85,7 @@ if(loginok!=null && dto.getMem_id().equals(id))
          {
          %>
          <button type="button" class="btn btn-outline-info btn-sm"
-         onclick="location.href='#'">관리자모드</button>
+         onclick="location.href='./movieadmin/AdminPage.jsp'">관리자모드</button>
          
         <%}
          %>

@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.coyote.Request;
+
 import data.dto.MovieDto;
 import mysql.db.DBConnect;
 
@@ -206,7 +208,7 @@ public class MovieDao {
 	//영화 제목 검색
 	public List<MovieDto> getmovie(String search) {	
 		List<MovieDto> list=new ArrayList<MovieDto>();
-	      
+	 		  
 	      Connection conn=db.getConnection();
 	      PreparedStatement pstmt=null;
 	      ResultSet rs=null;

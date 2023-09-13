@@ -116,7 +116,7 @@ public class MemberDao {
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
 		
-		String sql="select * from member_table order by mem_no desc";
+		String sql="select * from member_table order by mem_no";
 		
 		try {
 			pstmt=conn.prepareStatement(sql);

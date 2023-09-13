@@ -55,7 +55,7 @@
 		<td><%=dto.getMv_title() %></td>
 
 		
-		<td><img src="<%=dto.getMv_poster() %>" width="50px" height="150px"></td>
+		<td><img src="../<%=dto.getMv_poster() %>" width="100px" height="auto"></td>
 		<td><%=dto.getMv_director() %></td>
 		<td><%=dto.getMv_st() %></td>
 		<td><%=dto.getMv_trailer() %></td>

@@ -190,19 +190,21 @@ span:hover {
 					<li class="nav-item"><a  href="#"
 						style="position: absolute; left: 64%; top: 10%"><b>혜택</b></a></li>
 					
-					<li class="nav-item">
-						<input class="form-control" type="text" name="search"
-								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;"><a href="index.jsp?main=movieadmin/searchresult.jsp?search=<%=dto.getMv_title()%>"><i class="bi bi-search" style="background-color: white;position: flex;"></i></a>					
-					</li>
-					<%-- <%
+					
+					
+					<%
+					request.setCharacterEncoding("utf-8");
 					String search=request.getParameter("search");
 					%>
+					<form action="index.jsp?main=movieadmin/searchresult.jsp" method="post">
 					<li class="nav-item">
-					<input type="image" src="<%=root%>/logoimg/search1.png" style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;"
-					onclick="location.href='index.jsp?main=movieadmin/searchresult.jsp?search=<%=search%>'">
-		
-					</li> --%>
-					
+					<input class="form-control" type="text" name="search"
+								style="position:absolute; width: 10.2%; height: 60%; right: 10.5%; top: 13.5%;">
+					<input type="image" src="<%=root%>/logoimg/search1.png" style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;">
+					</li> 
+					</form>
+				
+	
 				</ul>
 			</div>
 		</nav>

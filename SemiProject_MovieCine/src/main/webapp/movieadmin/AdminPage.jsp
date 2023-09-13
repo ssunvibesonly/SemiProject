@@ -48,14 +48,14 @@ background-color: black;
 <table>
 <tr>
 <td align="center">
-<div style="width: 400px; height: 500px; border: 3px solid gray; cursor: pointer; background-color: white;" onclick="location.href='insertForm.jsp'" align="center">
+<div style="width: 400px; height: 500px; border: 3px solid gray; cursor: pointer; background-color: white;" onclick="location.href='../member/memberlist.jsp'" align="center">
 <img src="../image/memberedit.png">
 <br>
 <b>회원관리</b>
 </div>
 </td>
 <td align="center">
-<div style="width: 400px; height: 500px; border: 3px solid gray; cursor: pointer; background-color: white;" onclick="location.href='adminStart.jsp'" align="center">
+<div style="width: 400px; height: 500px; border: 3px solid gray; cursor: pointer; background-color: white;" onclick="location.href='listAdmin.jsp'" align="center">
 <img src="../image/movieedit.png">
 <br>
 <b>영화관리</b></div>

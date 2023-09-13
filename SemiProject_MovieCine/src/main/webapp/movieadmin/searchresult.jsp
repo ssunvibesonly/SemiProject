@@ -1,35 +1,37 @@
 <%@page import="data.dto.MovieDto"%>
 <%@page import="java.util.List"%>
 <%@page import="data.dao.MovieDao"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>Insert title here</title>
 
 <style>
 img.photo{
-	width: 200px;
-	height: 300px;
-	border: 1px solid gray;
-	margin-bottom: 10px;
+    width: 200px;
+    height: 300px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
 }
 </style>
 </head>
 <body>
 <%
-MovieDao dao=new MovieDao();
+request.setCharacterEncoding("UTF-8"); // HTTP 요청의 문자 인코딩을 UTF-8로 설정
 String search=request.getParameter("search");
+MovieDao dao=new MovieDao();
+System.out.println(search);
 List<MovieDto> list=dao.getmovie(search);
 
 System.out.println(list.size());
 %>
+
 
 <div class="container mt-3">
 		<h2 style="color: silver;">장르별 영화목록</h2>
@@ -485,6 +487,5 @@ System.out.println(list.size());
 				</div>			
 			</div>
 		</div>
-
 </body>
 </html>

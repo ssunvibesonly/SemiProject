@@ -37,6 +37,7 @@ not correct please set the HOME environment variable and restart Eclipse. Otherw
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 !SESSION 2023-08-30 00:57:52.920 -----------------------------------------------
 eclipse.buildId=4.28.0.20230608-1200
@@ -76,4 +77,6 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+>>>>>>> goyoung
+=======
 >>>>>>> goyoung

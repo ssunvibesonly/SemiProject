@@ -5,8 +5,11 @@ import java.sql.Timestamp;
 public class MovieDto {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+>>>>>>> goyoung
 		private String mv_no;
 	   private String mv_title;
 	   private String mv_poster;
@@ -22,6 +25,7 @@ public class MovieDto {
 	   private int mv_teen;
 	   private int mv_child;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 	private String mv_no;
@@ -41,6 +45,8 @@ public class MovieDto {
 >>>>>>> goyoung
 =======
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+>>>>>>> goyoung
 	
 	public String getMv_no() {
 		return mv_no;

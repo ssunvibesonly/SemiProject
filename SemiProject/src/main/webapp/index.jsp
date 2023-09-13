@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <title>영화 그 이상의 감동 '3'CINE 입니다</title>
 =======
 <style type="text/css">
@@ -20,6 +21,9 @@
 =======
 <title>영화 그 이상의 감동 '3'CINE 입니다</title>
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+<title>영화 그 이상의 감동 '3'CINE 입니다</title>
+>>>>>>> goyoung
 <%
 	//절대경로잡기
 	String root=request.getContextPath();
@@ -35,12 +39,16 @@
 %>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> goyoung
 </head>
 <style type="text/css">
 .layout{
 }
 
 .header{
+<<<<<<< HEAD
 	position: absolute;
 =======
 </head>
@@ -48,11 +56,14 @@
 
 .header{
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+>>>>>>> goyoung
 	width: 100%;
 	height: 100%;
 }
 
 .main{
+<<<<<<< HEAD
 <<<<<<< HEAD
 	position: absolute;
 	width: 100%;
@@ -94,15 +105,37 @@
 <<<<<<< HEAD
 =======
 <body>
+=======
+	width: 100%;
+	height: 100%;
+}
+
+.footer{
+	width: 100%;
+	height: 100%;
+}
+</style>
+<body background="color: black;">
+	
+>>>>>>> goyoung
 	<div class="layout header">
 		<jsp:include page="layout/header.jsp"/>
 	</div>
-
+	
 	<div class="layout main">
+<<<<<<< HEAD
 		<jsp:include page="layout/main.jsp"/>
 >>>>>>> goyoung
 =======
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+		<jsp:include page="<%=mainPage %>"/>
+>>>>>>> goyoung
 	</div>
+	
+	<footer>
+	<div class="layout footer">
+		<jsp:include page="layout/footer.jsp"/>
+	</div></footer>
 </body>
 </html>

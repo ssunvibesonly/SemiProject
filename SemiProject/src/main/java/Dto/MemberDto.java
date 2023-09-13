@@ -5,6 +5,9 @@ import java.sql.Timestamp;
 public class MemberDto {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> goyoung
 		private String Mem_no;
 		private String Mem_id;
 		private String Mem_pass;
@@ -81,6 +84,7 @@ public class MemberDto {
 		
 		
 }
+<<<<<<< HEAD
 =======
 	private String Mem_no;
 	private String Mem_id;
@@ -162,3 +166,5 @@ public class MemberDto {
 	
 	
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
+=======
+>>>>>>> goyoung

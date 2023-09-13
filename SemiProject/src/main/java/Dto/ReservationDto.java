@@ -3,7 +3,11 @@ package Dto;
 import java.sql.Timestamp;
 
 public class ReservationDto {
+<<<<<<< HEAD
    
+=======
+   private String mv_no;//movie_table 외래키
+>>>>>>> goyoung
    private String rev_no;
    private String mem_id;//member_table 외래키
    private String rev_title;
@@ -13,6 +17,18 @@ public class ReservationDto {
    private String rev_date;//영화관람일
    private String rev_place;//상영관
    private Timestamp rev_regdate;//예매일
+<<<<<<< HEAD
+=======
+   
+   
+   
+   public String getMv_no() {
+      return mv_no;
+   }
+   public void setMv_no(String mv_no) {
+      this.mv_no = mv_no;
+   }
+>>>>>>> goyoung
    public String getRev_no() {
       return rev_no;
    }

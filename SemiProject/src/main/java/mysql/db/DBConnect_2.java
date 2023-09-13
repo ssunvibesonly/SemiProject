@@ -12,9 +12,13 @@ public class DBConnect_2 {
 
 	//driver,url,계정 비밀번호
 <<<<<<< HEAD
+<<<<<<< HEAD
 	static final String MYSQL_URL="jdbc:mysql://semi.cghngf9gqw71.eu-north-1.rds.amazonaws.com:3306/semi?serverTimezone=Asia/Seoul";
 =======
 	static final String MYSQL_URL="jdbc:mysql://localhost:3306/coffee?serverTimezone=Asia/Seoul";
+>>>>>>> goyoung
+=======
+	static final String MYSQL_URL="jdbc:mysql://semi.cghngf9gqw71.eu-north-1.rds.amazonaws.com:3306/semi?serverTimezone=Asia/Seoul";
 >>>>>>> goyoung
 	
 	//driver
@@ -38,9 +42,13 @@ public class DBConnect_2 {
 		try {
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			conn=DriverManager.getConnection(MYSQL_URL,"admin3jo" , "joony1234");
 =======
 			conn=DriverManager.getConnection(MYSQL_URL,"goyoung" , "1234");
+>>>>>>> goyoung
+=======
+			conn=DriverManager.getConnection(MYSQL_URL,"admin3jo" , "joony1234");
 >>>>>>> goyoung
 			
 		} catch (SQLException e) {

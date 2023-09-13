@@ -133,6 +133,40 @@ span:hover {
 	color: #E58484;
 }
 </style>
+<script>
+
+$(function(){
+	
+	$("#searchbtn").click(function(){
+		
+		var search=$("#search").val();
+		alert(search);
+		if(search==""){
+			
+			alert("검색어를 입력해주세요");
+			
+			return;
+		}
+		location.href="index.jsp?main=movieadmin/searchresult.jsp?search="+search;
+		
+	})
+	
+	$("#search").keypress(function(e){
+		
+		var keycode=e.keyCode;
+		
+		var search=$("#search").val();
+		
+		if(keycode==13){
+
+			location.href="index.jsp?main=movieadmin/searchresult.jsp?search="+search;
+			
+		}
+
+	})
+	
+})
+</script>
 </head>
 <body>
 	<header>
@@ -201,21 +235,15 @@ span:hover {
 						
 					<li class="nav-item"><a  href="#"
 						style="position: absolute; left: 64%; top: 10%"><b>혜택</b></a></li>
-					
-					<form method="post" action="index.jsp?main=movieadmin/searchresult.jsp?search="+<%=search%>>
+			
+					<li class="nav-item">
+						<input type="text" class="form-control" name="search" id="search"style="position:absolute; width: 10.5%; height: 72%; right: 15%; top: 13.5%;">
+						&nbsp;&nbsp;<input type="button" class="btn btn-success" id="searchbtn"style="position:absolute; width: 60px; height: 30px; right:11%; top: 10%;" value="검색">
+						
+					</li>
+					<li class="nav-item">
 
-					<li class="nav-item">
-						<input type="hidden" name="mv_name" value="<%=dto.getMv_title() %>">
-						
-						<input type="text" class="form-control" name="search">
-						<input type="image" src="logoimg/search1.png" style="position:absolute; width: 1.4%; height: 55%; right:9%; top: 12.5%;">
-						
 					</li>
-					<li class="nav-item">
-					
-		
-					</li>
-					</form>
 				</ul>
 			</div>
 		</nav>

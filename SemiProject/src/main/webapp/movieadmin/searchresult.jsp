@@ -25,15 +25,18 @@ img.photo{
 <body>
 <%
 
+request.setCharacterEncoding("utf-8");
+
+
 //절대경로잡기
 String root=request.getContextPath();
 
 MovieDao dao=new MovieDao();
 String search=request.getParameter("search");
-String mv_name=request.getParameter("mv_name");
+System.out.println(search);
 List<MovieDto> list=dao.getmovie(search);
 
-System.out.println(list.size());
+System.out.println(list.size()); 
 
 
 %>

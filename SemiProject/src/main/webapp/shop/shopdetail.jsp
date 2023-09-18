@@ -38,7 +38,6 @@ function openPop(){
 	
 }
 
-
 </script>
 <body>
 
@@ -62,9 +61,9 @@ NumberFormat nf=NumberFormat.getCurrencyInstance();
 
 %>
 
-
-<input type="hidden" name="shopnum" value="<%=shopnum%>">
-<input type="hidden" name="num" value="<%=num%>">
+<form id="frm">
+<input type="hidden" name="shop_num" value="<%=shopnum%>">
+<input type="hidden" name="mem_no" value="<%=num%>">
 <br><br>
 
 <div class="container" style="width: 1000px;">
@@ -103,19 +102,20 @@ NumberFormat nf=NumberFormat.getCurrencyInstance();
 <hr style="color: white;width:470px;">
 <h4 style="color: white;">총 구매금액&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: #ff6347" id="totalPrice"><%=nf.format(sdto.getShop_price())%></b></h4>
 <div style="margin-left: 300px;">
-<button class="btn btn-danger basket"><i class="bi bi-cart"></i></button>
-<button class="btn btn-info">결제하기</button></div>
+<button type="button" class="btn btn-danger basket"><i class="bi bi-cart"></i></button>
+<button type="button" class="btn btn-info">결제하기</button></div>
 </span>
 
 </div>
 </div>
-
+</form>
 <br><br>
 <script>
 $(function(){
 	$(".basket").click(function(){
 		
-		var loginstatus=<%=loginok%>
+		var loginstatus="<%=loginok%>";
+		
 		
 		if(loginstatus==null){
 			
@@ -123,24 +123,57 @@ $(function(){
 			
 			if(logingo){
 				location.href="index.jsp?main=login/loginform.jsp";
+			
 			}
+			return;
 		}
+		
+		
+		var frm=$("#frm").serialize(); //serilaize()를 통해 <input>에 있는 name들을 모두 받아온다.
+		//alert(frm);
+			$.ajax({
+				
+				type:"post",
+				dataType:"html",
+				url:"shop/cartProc.jsp",
+				data:frm,
+				success:function(){
+					
+					var cart=confirm("장바구니에 상품이 추가되었습니다.\n장바구니로 이동하시겠습니까?");
+					
+					if(cart){
+						location.href="index.jsp?main=shop/myCart.jsp"
+					}
+					
+				}
+				
+				
+			})
+		
+		
 	})
 	
 })
         // 숫자 입력 필드의 값이 변경될 때 호출되는 함수
         function updateTotalPrice() {
+	
+			var won = Intl.NumberFormat('ko-KR', {
+	   		 style: 'currency',
+	   		 currency: 'KRW',
+			});
+	
+	
             // 입력 필드에서 숫자 값을 가져옴
             var cntValue = parseInt(document.getElementById('cnt').value);
             
-            // 상품 가격 가져오기 (이 부분은 실제 가격을 가져오는 방법에 따라 다를 수 있음)
+            // 상품 가격 가져오기
             var shopPrice = parseFloat('<%=sdto.getShop_price()%>');
             
             // 총 구매금액 계산
             var totalPrice = cntValue * shopPrice;
             
             // 결과를 총 구매금액 요소에 업데이트
-            document.getElementById('totalPrice').innerHTML = totalPrice
+            document.getElementById('totalPrice').innerHTML = won.format(totalPrice);
             		
         }
 

@@ -1,3 +1,5 @@
+<%@page import="java.util.Map"%>
+<%@page import="Dto.CartDto"%>
 <%@page import="java.text.NumberFormat"%>
 <%@page import="Dto.ShopDto"%>
 <%@page import="Dao.MemberDao"%>
@@ -60,16 +62,17 @@ int allmoney=0;
 			allmoney+=eachtotal;
 			
 			%>
-			<script>
+			<%-- <script>
 			$(function(){
 				var all=<%=allmoney%>
 				$("#all").text(all);
 			})
 			
 			
-			</script>
+			</script> --%>
 			<tr>
-				<td><input type="checkbox" idx=<%=map.get("idx") %> class="eachcheck" id="eachclick"></td>
+				<td><input type="checkbox" idx=<%=map.get("idx") %> class="eachcheck" id="eachclick" price=<%=eachtotal %>
+				name="cidx" value=<%=map.get("idx") %>></td>
 				<td><div class="sangpum" shopnum="<%= map.get("shopnum") %>">
 					<img src="shopimg/<%=photo%>" style="width:200px;">상품명:<%=map.get("name") %>상품설명:<%=map.get("detail") %>
 				</div></td>
@@ -82,33 +85,123 @@ int allmoney=0;
 
 		<%}%>
 		<tr>
-			<td colspan="5" id="all">
-				총 금액:<b></b>
+			<td colspan="5" style="text-align: right;">
+				총 금액:<b id="all">0원</b>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="5" style="text-align: center">
+				<button type="button" class="btn btn-outline-danger" id="delbtn">선택 삭제</button>
+				<button type="button" class="btn btn-outline-info" id="buybtn">구매하기</button>
 			</td>
 		</tr>
 	
 </table>
 </div>
 <script>
-$("#allcheck").click(function(){
 	
-	var allcheck=$(this).is(":checked"); //전체 체크시 체크 여부 확인
-	console.log(allcheck);
-	
-	$(".eachcheck").prop("checked",allcheck);
-	
-	
-})
+	$("#allcheck").click(function() {
+		  var allcheck = $(this).is(":checked"); // 전체 체크 여부 확인
+		  console.log(allcheck);
 
-$("#eachclick").click(function(){
+		  // 모든 개별 체크박스에 대해 상태 업데이트
+		  $(".eachcheck").prop("checked", allcheck);
+
+		  // 체크된 개별 체크박스들의 가격을 합산
+		  var alltot = 0;
+
+		  // 각 개별 체크박스 가격을 누적
+		  $(".eachcheck:checked").each(function() {
+		    alltot += parseInt($(this).attr("price"));
+		  });
+
+		  // 총 금액을 #all 요소에 업데이트
+		  $("#all").text(alltot + "원");
+		});
+
+  // 각각의 체크박스가 변경될 때마다 실행되는 함수
+  $(".eachcheck").change(function() {
+    var total = 0; // 총 금액을 저장할 변수 초기화
+
+    // 모든 선택된 체크박스 값을 누적
+    $(".eachcheck:checked").each(function() {
+      total += parseInt($(this).attr("price"));
+    });
+
+    // 총 금액을 #all 요소에 표시
+    $("#all").text(total + "원");
+  });
+
+$("#delbtn").click(function(){
 	
-	var size=$(".eachcheck:checked").length;
-	if(size==0){
-		$("#all").html(0);
+	var leng=$(".eachcheck:checked").length;
+	//alert(leng);
+	
+	if(leng==0){
+		
+		alert("삭제할 상품을 선택해주세요");
+		
+	}else{
+		
+		var y=confirm(leng+"개의 상품을 삭제하시겠습니까?");
+		//alert(y);
+		if(y){
+
+			$(".eachcheck:checked").each(function(idx){
+				
+				var cidx=$(this).val();
+				del(cidx);
+				
+			})
+			
+		}
 		
 	}
+	
+	
 })
 
+$("#buybtn").click(function(){
+	
+	var leng=$(".eachcheck:checked").length;
+	var cidx_s="";
+	
+	//alert(leng);
+	
+	$(".eachcheck:checked").each(function(idx){
+		var cidx=$(this).val(); //체크한 상품들의 시퀀스 값 받아옴
+		
+		cidx_s+=cidx+",";
+		
+	})
+	
+	cidx_s=cidx_s.substring(0,cidx_s.length-1);
+	
+	alert(cidx_s);
+	var buy=confirm(leng+"개의 상품을 구매하시겠습니까?");
+	
+	if(buy){
+		location.href="index.jsp?main=shop/payment.jsp?cidx_s="+cidx_s;
+	}
+	
+})
+
+function del(cidx){
+
+	$.ajax({
+		
+		type:"get",
+		dataType:"html",
+		url:"shop/deleteMycart.jsp",
+		data:{"cidx":cidx},
+		success:function(){
+			location.reload();
+		}
+		
+	})
+	
+	
+}
 </script>
 
 </body>

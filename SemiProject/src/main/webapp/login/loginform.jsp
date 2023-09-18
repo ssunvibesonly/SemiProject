@@ -101,13 +101,9 @@ hr{
          </tr>
          <tr>
          	<td>
-         	<a href="javascript:void(0)" onclick="kakaoLogin()"><img height="38px"  src="image/kakao_login_medium_narrow.png"/></a>
-         	<form id="kakaogaip" method="post" action="login/kakao.jsp">
-         	<input type="hidden" name="mem_name"> <!-- 카카오 닉네임으로 쓸 것 -->
-         	<input type="hidden" name="mem_gender"> <!-- 카카오 성별 -->
-         	<input type="hidden" name="mem_birth"> <!-- 카카오 생일 -->
-         	<input type="hidden" name="mem_email"> <!-- 카카오 이메일 -->
-         	</form>
+         	
+         	 <a href="javascript:kakaoLogin()"><img height="38px"  src="image/kakao_login_medium_narrow.png"/></a>
+       
          	
          	<!-- 카카오스크립트 -->
          	
@@ -116,50 +112,62 @@ hr{
          	console.log(Kakao.isInitialized())
          	
          	function kakaoLogin() {
-    		Kakao.Auth.login({
-     		 success: function (response) {
-       			 Kakao.API.request({
-          			url: '/v2/user/me', //kakao.auth.login(auth)을 request하면 유효시간이 존재하는 토큰
-          			success: function (response) {
-						
-          				var account=response.kakao_account;
-          				console.log(account); //카카오계정으로 로그인한 사용자 정보 호출하기
-          				
-          				$("#kakaogaip input[name=mem_name]").val(account.profile.nickname)
-          				$("#kakaogaip input[name=mem_gender]").val(account.gender)
-          				$("#kakaogaip input[name=mem_birth]").val(account.birth)
-						$("#kakaogaip input[name=mem_email]").val(account.email)
-						
-						// 사용자 정보가 포함된 폼을 서버로 제출한다.
-						document.querySelector('#kakaogaip').submit();
-          		},
-          		fail: function (error) {
-          		// 경고창에 에러메시지 표시
-					$('alert-kakao-login').removeClass("d-none").text("카카오 로그인 처리 중 오류가 발생했습니다.")
-         		 },
-        		})
-      			},
-     		 fail: function (error) {
-      		  console.log(error)
-      			},
-   			 })
-  			}
-         	
-         	//카카오로그아웃  
-         	function kakaoLogout() {
-         	    if (Kakao.Auth.getAccessToken()) {
-         	      Kakao.API.request({
-         	        url: '/v1/user/unlink',
-         	        success: function (response) {
-         	        	console.log(response)
-         	        },
-         	        fail: function (error) {
-         	          console.log(error)
-         	        },
-         	      })
-         	      Kakao.Auth.setAccessToken(undefined)
-         	    }
-         	  }  
+        	Kakao.Auth.login({
+            success: function (response) {
+                Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function (response) {
+                        
+                    	 id=response.id;
+                    	 kakao_account=response.kakao_account;
+                    	 nickname=kakao_account.profile.nickname;
+                    	 email=kakao_account.email;
+                    	 gender=kakao_account.gender;
+                    	 birth=kakao_account.birthday;
+                    	 
+                    	 if(gender=="female"){
+                    		 gender="여자";
+                    	 }
+                    	 if(gender=="male"){
+                    		 gender="남자";
+                    	 }
+                    	 
+                    	 if(birth&&birth.length==4){
+                    		 birth=birth.substring(0,2)+"-"+birth.substring(2); //첫번째 substring은 0번째부터 2번째 직전까지 가져온다는 뜻 , 두번째는 substring은 2번째부터 마지막까지 출력
+                    	 }
+                    	 
+                    	/* alert(id);
+                    	alert(gender)
+              			alert(nickname);
+              			alert(email);
+              			; */
+              			
+              			 $.ajax({
+              			
+              				type:"post",
+              				dataType:"html",
+              				url:"login/kakao.jsp",
+              				data:{"id":id,"nickname":nickname,"email":email,"gender":gender,"birth":birth},
+              				success:function(){
+              					
+              					location.href="index.jsp?main=layout/main.jsp";
+              				}
+              			})  
+              			
+                    	 
+                        
+                        
+                    },
+                    fail: function (error) {
+                        alert(JSON.stringify(error))
+                    },
+                })
+            },
+            fail: function (error) {
+                alert(JSON.stringify(error))
+            },
+        })
+    }
          	</script>
          	</td>
          </tr>

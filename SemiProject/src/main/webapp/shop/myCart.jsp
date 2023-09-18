@@ -26,7 +26,6 @@ List<HashMap<String,String>> list=dao.getCartList(myid);
 MemberDao mdao=new MemberDao();
 
 String name=mdao.getName(myid);
-String ph=mdao.getPh(myid);
 
 NumberFormat nf=NumberFormat.getCurrencyInstance();
 

@@ -1,3 +1,4 @@
+
 <%@page import="java.text.NumberFormat"%>
 <%@page import="Dto.ShopDto"%>
 <%@page import="java.util.List"%>
@@ -20,6 +21,23 @@ ShopDao dao=new ShopDao();
 List<ShopDto> list=dao.getAllData();
 
 %>
+<script>
+$(function(){
+	
+	$("a.detailpage").click(function(){
+		
+		var num=$(this).attr("shopnum");
+		//alert(a);
+		location.href="index.jsp?main=shop/shopdetail.jsp?shopnum="+num;
+	})
+	
+	
+})
+
+
+</script>
+
+
 
 <style>
 .indexcolor{
@@ -65,13 +83,12 @@ color: white;
 					ShopDto dto=list.get(i);
 					%>
 					
-					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
-					href="#"><div style="float: left;">
-					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
-					<h4><%=dto.getShop_sangpum() %></h4>
-					<h5><%=dto.getShop_detail() %></h5>
-					<h6><%=nf1.format(dto.getShop_price()) %>원</h6>
-					</div></a>
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage">
+					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:100px;height: auto;"></a><br>
+					<h4 style="color: white;"><%=dto.getShop_sangpum() %></h4>
+					<h5 style="color: white;"><%=dto.getShop_detail() %></h5>
+					<h6 style="color: white;"><%=nf1.format(dto.getShop_price()) %>원</h6>
+					
 				<%
 				if(i%4==0){
 				%>
@@ -93,8 +110,7 @@ color: white;
 					ShopDto dto=list.get(i);
 					if(dto.getShop_category().equals("패키지")){%>
 					
-					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
-					href="#"><div style="float: left;">
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"><div style="float: left;">
 					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
 					<h4><%=dto.getShop_sangpum() %></h4>
 					<h5><%=dto.getShop_detail() %></h5>
@@ -122,8 +138,7 @@ color: white;
 					ShopDto dto=list.get(i);
 					if(dto.getShop_category().equals("팝콘")){%>
 					
-					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
-					href="#"><div style="float: left;">
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"><div style="float: left;">
 					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
 					<h4><%=dto.getShop_sangpum() %></h4>
 					<h5><%=dto.getShop_detail() %></h5>
@@ -150,8 +165,7 @@ color: white;
 					ShopDto dto=list.get(i);
 					if(dto.getShop_category().equals("음료")){%>
 					
-					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
-					href="#"><div style="float: left;">
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"><div style="float: left;">
 					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
 					<h4><%=dto.getShop_sangpum() %></h4>
 					<h5><%=dto.getShop_detail() %></h5>
@@ -179,8 +193,7 @@ color: white;
 					ShopDto dto=list.get(i);
 					if(dto.getShop_category().equals("콤보")){%>
 					
-					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"
-					href="#"><div style="float: left;">
+					<a shopnum=<%=dto.getShop_num() %> style="cursor: pointer;" class="detailpage"><div style="float: left;">
 					<img src="shopimg/<%=dto.getShop_photo()%>" style="width:200px;height: 300px;"><br>
 					<h4><%=dto.getShop_sangpum() %></h4>
 					<h5><%=dto.getShop_detail() %></h5>

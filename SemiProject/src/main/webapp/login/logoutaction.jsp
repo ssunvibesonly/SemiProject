@@ -15,7 +15,7 @@
       session.removeAttribute("loginok");
       
       //loginmain으로이동
-      response.sendRedirect("loginmain.jsp");
+      response.sendRedirect("../index.jsp?main=login/loginform.jsp");
    %>
 </body>
 </html>

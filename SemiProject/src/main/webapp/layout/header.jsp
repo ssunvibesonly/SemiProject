@@ -32,6 +32,7 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
 	rel="stylesheet">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <<<<<<< HEAD
 <title>Insert title here</title>
@@ -59,11 +60,17 @@ a:link {
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 =======
 >>>>>>> goyoung
+=======
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+>>>>>>> goyoung
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <title>header</title>
 <%
 //절대경로잡기
 String root = request.getContextPath();
+
+String loginok=(String)session.getAttribute("loginok");
+String myid=(String)session.getAttribute("myid");
 
 MovieDao dao=new MovieDao();
 MovieDto dto=new MovieDto();
@@ -306,6 +313,7 @@ span:hover {
 	color: #E58484;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 </style>
 </head>
 <body>
@@ -533,6 +541,14 @@ span:hover {
 =======
 =======
 >>>>>>> goyoung
+=======
+
+button#searchbtn{
+all: unset;
+color: white;
+cursor: poi
+}
+>>>>>>> goyoung
 </style>
 <script>
 
@@ -579,11 +595,16 @@ $(function(){
 					href="<%=root %>/index.jsp?main=layout/main.jsp"><img alt=""
 						src="<%=root%>/logoimg/logo1.gif"
 						style="width: 430px; height: 200px; position: absolute; left: 37.3%; top: -15px;"></a></li>
-				<li><a
-					href=""><img
-						src="<%=root%>/logoimg/admin.png" alt=""
-						style="width: 22px; height: 22px; position: absolute; left: 74.7%; top: 6%;" /><br>
-					<span style="left: 74%; top: 10%;">Admin</span></a></li>
+				
+				
+				<% if (myid!=null&&myid.equals("admin")&&loginok!=null) { %>
+            <li><a
+               href="<%=root%>/index.jsp?main=shop/addform.jsp"><img
+                  src="<%=root%>/logoimg/admin.png" alt=""
+                  style="width: 22px; height: 22px; position: absolute; left: 74.7%; top: 6%;" /><br>
+               <span style="left: 74%; top: 10%;">Admin</span></a></li>
+               <%}%>
+               
 				<li><a
 					href="<%=root%>/index.jsp?main=login/loginmain.jsp"><img
 						src="<%=root%>/logoimg/1.png" alt=""
@@ -599,10 +620,10 @@ $(function(){
 						src="<%=root%>/logoimg/3.png" alt=""
 						style="width: 22px; height: 22px; position: absolute; left: 88.35%; top: 6%;" /><br>
 					<span style="left: 87.22%; top: 10%;">MY INFO</span></a></li>
-				<li><a href="<%=root%>/index.jsp?main=shop/addform.jsp"><img
-						src="<%=root%>/logoimg/4.png" alt=""
-						style="width: 22px; height: 22px; color: white; position: absolute; left: 92.75%; top: 6%;" /><br>
-					<span style="left: 91.81%; top: 10%;">고객센터</span></a></li>
+				<li><a href="<%=root%>/index.jsp?main=shop/myCart.jsp"><img
+						src="<%=root%>/logoimg/cart.png" alt=""
+						style="width: 30px; height: 30px; color: white; position: absolute; left: 92.3%; top: 6%;" /><br>
+					<span style="left: 91.81%; top: 10%;">장바구니</span></a></li>
 			</ul>
 		</div>
 	</div>
@@ -639,7 +660,7 @@ $(function(){
 			
 					<li class="nav-item">
 						<input type="text" class="form-control" name="search" id="search"style="position:absolute; width: 10.5%; height: 72%; right: 15%; top: 13.5%;">
-						&nbsp;&nbsp;<input type="button" class="btn btn-success" id="searchbtn"style="position:absolute; width: 60px; height: 30px; right:11%; top: 10%;" value="검색">
+						&nbsp;&nbsp;<button id="searchbtn"style="position:absolute; width: 60px; height: 30px; right:11%; top: 10%;"><i class="bi bi-search"></i></button>
 						
 					</li>
 					<li class="nav-item">

@@ -24,7 +24,7 @@ img.photo{
 <body>
 <%
 MovieDao dao=new MovieDao();
-List<MovieDto> list=dao.getAllMovies();
+List<MovieDto> list=dao.getAllMovieInfo();
 
 %>
 

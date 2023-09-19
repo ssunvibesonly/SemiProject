@@ -20,6 +20,7 @@
 </head>
 <%
 String myid=(String)session.getAttribute("myid"); //연결된 아이디 session 가져오기(로그인 했을 때만 장바구니 담을 수 있음)
+String loginok=(String)session.getAttribute("loginok");
 ShopDao dao=new ShopDao();
 
 List<HashMap<String,String>> list=dao.getCartList(myid);
@@ -35,7 +36,13 @@ int allmoney=0;
 <body>
 <br><br>
 <div class="container" style="width: 1000px;">
-<h1 style="color: white;"><%=name %>님의 장바구니</h1>
+<%
+if(loginok!=null && myid!=null){%>
+	<h1 style="color: white;"><%=name %>님의 장바구니</h1>
+<%}else{%>
+	<h1 style="color: white;">비회원님의 장바구니</h1>
+	
+<%}%>
 <hr style="color: white;border: 3px solid white;">
 <table class="table table-bordered">
 	<tr>
@@ -61,14 +68,6 @@ int allmoney=0;
 			allmoney+=eachtotal;
 			
 			%>
-			<%-- <script>
-			$(function(){
-				var all=<%=allmoney%>
-				$("#all").text(all);
-			})
-			
-			
-			</script> --%>
 			<tr>
 				<td><input type="checkbox" idx=<%=map.get("idx") %> class="eachcheck" id="eachclick" price=<%=eachtotal %>
 				name="cidx" value=<%=map.get("idx") %>></td>

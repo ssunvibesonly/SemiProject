@@ -148,7 +148,7 @@ hr{
               				dataType:"html",
               				url:"login/kakao.jsp",
               				data:{"id":id,"nickname":nickname,"email":email,"gender":gender,"birth":birth},
-              				success:function(){
+              				success:function(res){
               					
               					location.href="index.jsp?main=layout/main.jsp";
               				}

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <%@page import="java.util.ArrayList"%>
 <%@page import="Dto.SeatDto"%>
 <%@page import="java.util.List"%>
 <%@page import="Dao.SeatDao"%>
 <%@page import="Dto.MovieDto"%>
 <%@page import="Dao.MovieDao"%>
->>>>>>> goyoung
 <%@page import="Dto.ReservationDto"%>
 <%@page import="Dao.ReservationDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -20,10 +17,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-<<<<<<< HEAD
-=======
   <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
->>>>>>> goyoung
 <style type="text/css">
 * {
   box-sizing: border-box;
@@ -36,22 +30,15 @@ body {
   color: gray;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  height: 100vh;
-=======
   /* height: 100vh; */
->>>>>>> goyoung
   /* font-family: 'Lato', 'sans-serif'; */
 }
 
 .movie-container{
    margin: 20px 0; 
-<<<<<<< HEAD
-=======
    display: flex;
    justify-content: center;
    color: white;
->>>>>>> goyoung
 }
 
 .movie-container select {
@@ -67,15 +54,6 @@ body {
   appearance: none;
 }
 
-<<<<<<< HEAD
-.seat {
-  background-color: #444451;
-  height: 12px;
-  width: 15px;
-  margin: 3px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-=======
 .refSeat{
    background-color: orange;
    border-top-left-radius: 10px;
@@ -90,7 +68,6 @@ body {
     border-top-right-radius: 10px;
     height: 30px;
     width: 30px;
->>>>>>> goyoung
 }
 
 .seat.selected {
@@ -98,16 +75,12 @@ body {
 }
 
 .seat.occupied {
-<<<<<<< HEAD
-  background-color: #fff;
-=======
-	width:30px;
-	height:30px;
+   width:30px;
+   height:30px;
    border-top-left-radius: 10px;
   border-top-right-radius: 10px; 
   background-color: white;
   
->>>>>>> goyoung
 }
 
 .seat:nth-of-type(2) {
@@ -124,28 +97,15 @@ body {
 }
 
 .showcase {
-<<<<<<< HEAD
-  background-color: gray;
-  padding: 5px 10px;
-=======
   
->>>>>>> goyoung
   border-radius: 5px;
   color: white;
   list-style-type: none;
   display: flex;
-<<<<<<< HEAD
-  justify-content: space-between;
-}
-
-.showcase li {
-  display: flex;
-=======
 
 }
 
 .showcase li {
->>>>>>> goyoung
   align-items: center;
   justify-content: center;
   margin: 0 10px;
@@ -156,20 +116,12 @@ body {
 }
 
 .screen {
-<<<<<<< HEAD
-  background-color: black;
-=======
   background-color: white;
->>>>>>> goyoung
   height: 70px;
   width: 100%;
   margin: 15px 0;
   transform: rotateX(-45deg);
-<<<<<<< HEAD
-  box-shadow: 0 3px 10px gray;
-=======
   box-shadow: 0 5px 5px gray;
->>>>>>> goyoung
 }
 
 .container {
@@ -178,14 +130,6 @@ body {
 }
 
 .seat {
-<<<<<<< HEAD
-  background-color: gray;
-  height: 12px;
-  width: 15px;
-  margin: 3px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-=======
   background-color: orange;
   height: 30px;
   margin: 3px;
@@ -194,7 +138,6 @@ body {
   border-top-right-radius: 10px;
   display: flex;
   justify-content: center;
->>>>>>> goyoung
 }
 
 .row {/* 좌석 가운데 정렬*/
@@ -205,11 +148,8 @@ body {
 /*영화정보css*/
 #select_info{
 
-<<<<<<< HEAD
-position:absolute;
-=======
 background-color:white;
->>>>>>> goyoung
+border-radius:20px;
 border:2px solid gray;
 top:750px;
 left:200px;
@@ -243,14 +183,6 @@ width:200px;
 height:100px;
 
 }
-<<<<<<< HEAD
-</style>
-</head>
-<body>
-<div class="movie-container">
-      <label>성인:</label>
-      <select id="adult">
-=======
 
 ul li{
    list-style-type: none;
@@ -273,15 +205,16 @@ ul li{
    
    //System.out.println(adultPrice+","+ teenPrice+","+ childPrice);
    
-   //사전에 예매된 좌석들을 가져오기
-   SeatDao sdao = new SeatDao();
-   List<SeatDto> list = sdao.getSeats();
-   
+   //사전에 예매된 좌석들을 가져오기(영화별)
+   String mv_no=dto.getMv_no();
+   List<String> rev_nos = dao.getRev_no(mv_no);
    String occupiedSeats="";
    
-   for(int i=0; i<list.size(); i++){
-      occupiedSeats+=list.get(i).getSeat_name()+",";
+   for(int i=0; i<rev_nos.size(); i++){
+      SeatDao sdao = new SeatDao();
+      occupiedSeats+=sdao.getSeatRev(rev_nos.get(i)).getSeat_name()+",";
    }
+   
    
    String[] seats = occupiedSeats.split(",");
    
@@ -289,18 +222,20 @@ ul li{
 <script type="text/javascript">
 $(function(){
    
-   //사전에 예매된 좌석들에 occupied 클래스 적용
-   <%
-      for(int i=0; i<seats.length; i++){
-         %>
-         var seat = $("#<%=seats[i]%>");
-         if(seat){
-            seat.addClass("occupied");
-         }
-         <%
-      }
-   %>
-   
+      //사전에 예매된 좌석들에 occupied 클래스 적용
+       <%
+          if(occupiedSeats!=""){
+             for(int i=0; i<seats.length; i++){
+                   %>
+                   var seat = $("#<%=seats[i]%>");
+                   if(seat){
+                      seat.addClass("occupied");
+                   }
+                   <%
+                }
+          }
+       %>
+      
    
    
    var adult=0;
@@ -390,7 +325,7 @@ $(function(){
       var seatName = $(this).text();
       
       if(total==0){
-         alert("좌석을 선택해 주세요.");
+         alert("인원을 선택해 주세요.");
          return;
       }
       
@@ -433,31 +368,37 @@ $(function(){
       var selectedSeat = $("#selectedSeat").text();
       var rev_no = <%=dto.getRev_no()%>;
       
+      /* alert(adultCnt+","+teenCnt+","+childCnt+","+totalPrice+","+selectedSeat+","+rev_no); */
+      
       $.ajax({
          type:"post",
-         url:"seatInsert.jsp",
+         url:"Movie_reserve/seatInsert.jsp",
          data:{"adultCnt":adultCnt,"teenCnt":teenCnt,"childCnt":childCnt,"totalPrice":totalPrice,"selectedSeat":selectedSeat,"rev_no":rev_no},
          dataType:"json",
          success:function(res){
             alert("insert success");
-            location.href="payment.jsp?seat_no="+res.seat_no;
+            location.href="index.jsp?main=Movie_reserve/payment.jsp?seat_no="+res.seat_no;
          }
       });
+      
       
    });
    
    
 });
 
-</script> --%>
+</script>
 </head>
 <body>
-<br><hr style="color: white;"><br>
+<br><br>
+<div class="container">
+<h1 style="color: white;font-weight: bold;margin-left: 40px;">좌석 선택</h1>
+<hr style="color: white">
+<hr style="border: 3px solid white;"></div>
 <div class="movie-container">
       <label>성인:</label>
       <select id="adult">
          <option value="0">0</option>
->>>>>>> goyoung
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -467,10 +408,7 @@ $(function(){
       
       <label>청소년:</label>
       <select id="teen">
-<<<<<<< HEAD
-=======
          <option value="0">0</option>
->>>>>>> goyoung
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -480,10 +418,7 @@ $(function(){
       
        <label>아동:</label>
       <select id="child">
-<<<<<<< HEAD
-=======
          <option value="0">0</option>
->>>>>>> goyoung
        <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -492,28 +427,6 @@ $(function(){
       </select>
     </div>
     
-<<<<<<< HEAD
-    <ul class="showcase">
-      <li>
-        <div class="seat"></div>
-        <small>N/A</small>
-      </li>
-
-      <li>
-        <div class="seat selected"></div>
-        <small>Selected</small>
-      </li>
-
-      <li>
-        <div class="seat occupied"></div>
-        <small>Occupied</small>
-      </li>
-    </ul>
-    
-   <div class="container">
-    <div class="screen"></div>
-    <table class="table table-bordered">
-=======
     <div class="container" style="width: 300px;height: 50px;">
     <ul class="showcase" >
       <li>
@@ -535,68 +448,17 @@ $(function(){
     
    <div class="container">
     <div class="screen" style="text-align: center;font-size: 35pt;margin-top: 30px;margin-bottom: 30px;">SCREEN</div>
->>>>>>> goyoung
     <%
        for(int i=65; i<75; i++){%>
        <div class="row">
        <%
           for(int j=1; j<9; j++){%>
-<<<<<<< HEAD
-             <div class="seat"><%=(char)i %><%=j %></div>
-=======
              <div class="seat" id="<%=(char)i %><%=j %>" style="width: 30px;"><b><%=(char)i %><%=j %></b></div>
->>>>>>> goyoung
           <%}
        %>
        </div>
        <%}
     %>
-<<<<<<< HEAD
-    </table>
-   </div>
-    
-     <p class="text">
-      선택 좌석: <span id="count">0</span>&nbsp; 가격: &nbsp;<span id="total">0</span>원
-    </p>
-
-<%
-   ReservationDao dao = new ReservationDao();
-   int num = dao.maxNum();
-   //System.out.println(num);
-   ReservationDto dto = dao.getData(num);
-%>
-
-<form action="#" method="post">
-<div id="select_info">
-
-<div class="poster" id="poster"><%=dto.getRev_poster() %></div>
-
-<div class="mvinfo">
-<span>영화명<b id="mvtitle" class="mvtitle"><%=dto.getRev_title() %></b></span>
-<br><br>
-<span>관람연령</span>&nbsp;<img src="<%=dto.getRev_age() %>" id="mvage">
-</div>
-
-<span style="border: 1px solid gray;height:250px;position: absolute;top: 25px;left: 410px;" ></span>
-
-
-<div class="clickinfo">
-<span>극장&nbsp;<b>'3'CINE&nbsp;</b><b id="mvcinema"><%=dto.getRev_name() %></b></span>
-<br><br>
-<span>일시&nbsp;&nbsp;</span><b id="mvdate"><%=dto.getRev_date() %></b>
-<br><br>
-<span>상영관&nbsp;&nbsp;<b id="mvplace"><%=dto.getRev_place() %></b></span>
-<br><br>
-<span>인원&nbsp;&nbsp;<b>인원</b></span>
-</div>
-
-<span style="border: 1px solid gray;height:250px;position: absolute;top: 25px;left: 410px;" ></span>
-
-<input type="button" value="좌석선택" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
-</div>
-
-</form>
-=======
    </div>
 
 
@@ -616,16 +478,19 @@ $(function(){
 극장&nbsp;<b>'3'CINE&nbsp;</b><b id="mvcinema"><%=dto.getRev_name() %></b><br><br>
 일시&nbsp;&nbsp;<b id="mvdate"><%=dto.getRev_date() %></b><br><br>
 상영관&nbsp;&nbsp;<b id="mvplace"><%=dto.getRev_place() %></b><br><br>
-인원&nbsp;&nbsp;<b>성인:</b><b>&nbsp;청소년:</b><b>&nbsp;아동:</b>
-좌석&nbsp;&nbsp;<b>좌석출력</b>
-가격&nbsp;&nbsp;<b>가격출력</b>
+인원&nbsp;<b id="mvpeople">
+성인<b id="adultCnt"></b>
+청소년<b id="teenCnt"></b>
+아동<b id="childCnt"></b>
+</b><br><br>
+좌석&nbsp;&nbsp;<b id="selectedSeat"></b><br><br>
+가격&nbsp;&nbsp;<b id="totalPrice"></b>원<br>
 </div>
 
 
-<input type="button" value="좌석선택" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
+<input type="button" value="결제하기" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
 </div>
 </div>
 
->>>>>>> goyoung
 </body>
 </html>

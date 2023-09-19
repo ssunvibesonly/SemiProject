@@ -109,7 +109,7 @@ NumberFormat nf=NumberFormat.getCurrencyInstance();
 </div>
 </div>
 </form>
-<br><br>
+<br><br><br><br>
 <script>
 $(function(){
 	$(".basket").click(function(){

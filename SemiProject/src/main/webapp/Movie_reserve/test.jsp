@@ -148,8 +148,7 @@ body {
 /*영화정보css*/
 #select_info{
 
-background-color:white;
-border-radius:20px;
+position:absolute;
 border:2px solid gray;
 top:750px;
 left:200px;
@@ -189,7 +188,7 @@ ul li{
 }
 
 </style>
-<%
+<%-- <%
    ReservationDao dao = new ReservationDao();
    //가장최신에 예약중인 예약페이지의 좌석을 선택하기 위해
    int num = dao.maxNum();
@@ -205,16 +204,15 @@ ul li{
    
    //System.out.println(adultPrice+","+ teenPrice+","+ childPrice);
    
-   //사전에 예매된 좌석들을 가져오기(영화별)
-   String mv_no=dto.getMv_no();
-   List<String> rev_nos = dao.getRev_no(mv_no);
+   //사전에 예매된 좌석들을 가져오기
+   SeatDao sdao = new SeatDao();
+   List<SeatDto> list = sdao.getSeats();
+   
    String occupiedSeats="";
    
-   for(int i=0; i<rev_nos.size(); i++){
-      SeatDao sdao = new SeatDao();
-      occupiedSeats+=sdao.getSeatRev(rev_nos.get(i)).getSeat_name()+",";
+   for(int i=0; i<list.size(); i++){
+      occupiedSeats+=list.get(i).getSeat_name()+",";
    }
-   
    
    String[] seats = occupiedSeats.split(",");
    
@@ -222,20 +220,18 @@ ul li{
 <script type="text/javascript">
 $(function(){
    
-      //사전에 예매된 좌석들에 occupied 클래스 적용
-       <%
-          if(occupiedSeats!=""){
-             for(int i=0; i<seats.length; i++){
-                   %>
-                   var seat = $("#<%=seats[i]%>");
-                   if(seat){
-                      seat.addClass("occupied");
-                   }
-                   <%
-                }
-          }
-       %>
-      
+   //사전에 예매된 좌석들에 occupied 클래스 적용
+   <%
+      for(int i=0; i<seats.length; i++){
+         %>
+         var seat = $("#<%=seats[i]%>");
+         if(seat){
+            seat.addClass("occupied");
+         }
+         <%
+      }
+   %>
+   
    
    
    var adult=0;
@@ -325,7 +321,7 @@ $(function(){
       var seatName = $(this).text();
       
       if(total==0){
-         alert("인원을 선택해 주세요.");
+         alert("좌석을 선택해 주세요.");
          return;
       }
       
@@ -368,33 +364,26 @@ $(function(){
       var selectedSeat = $("#selectedSeat").text();
       var rev_no = <%=dto.getRev_no()%>;
       
-      /* alert(adultCnt+","+teenCnt+","+childCnt+","+totalPrice+","+selectedSeat+","+rev_no); */
-      
       $.ajax({
          type:"post",
-         url:"Movie_reserve/seatInsert.jsp",
+         url:"seatInsert.jsp",
          data:{"adultCnt":adultCnt,"teenCnt":teenCnt,"childCnt":childCnt,"totalPrice":totalPrice,"selectedSeat":selectedSeat,"rev_no":rev_no},
          dataType:"json",
          success:function(res){
             alert("insert success");
-            location.href="index.jsp?main=Movie_reserve/payment.jsp?seat_no="+res.seat_no;
+            location.href="payment.jsp?seat_no="+res.seat_no;
          }
       });
-      
       
    });
    
    
 });
 
-</script>
+</script> --%>
 </head>
 <body>
-<br><br>
-<div class="container">
-<h1 style="color: white;font-weight: bold;margin-left: 40px;">좌석 선택</h1>
-<hr style="color: white">
-<hr style="border: 3px solid white;"></div>
+<br><hr style="color: white;"><br>
 <div class="movie-container">
       <label>성인:</label>
       <select id="adult">
@@ -447,7 +436,7 @@ $(function(){
     </div>
     
    <div class="container">
-    <div class="screen" style="text-align: center;font-size: 35pt;margin-top: 30px;margin-bottom: 30px;">SCREEN</div>
+    <div class="screen"></div>
     <%
        for(int i=65; i<75; i++){%>
        <div class="row">
@@ -462,35 +451,56 @@ $(function(){
    </div>
 
 
-<div class="container">
-<div id="select_info" class="container" style="clear: both;">
+<%-- <div id="select_info">
 
-<div class="poster" id="poster" style="float: left;" ><%=dto.getRev_poster() %></div>
+<div class="poster" id="poster"><%=dto.getRev_poster() %></div>
 
-<div class="mvinfo" style="float: left;">
-영화명<b id="mvtitle" class="mvtitle"><%=dto.getRev_title() %></b>
+<div class="mvinfo">
+<span>영화명<b id="mvtitle" class="mvtitle"><%=dto.getRev_title() %></b></span>
 <br><br>
-관람연령&nbsp;<img src="<%=dto.getRev_age() %>" id="mvage" style="width: 40px;">
+<span>관람연령</span>&nbsp;<img src="<%=dto.getRev_age() %>" id="mvage">
 </div>
 
-
-<div class="clickinfo" >
-극장&nbsp;<b>'3'CINE&nbsp;</b><b id="mvcinema"><%=dto.getRev_name() %></b><br><br>
-일시&nbsp;&nbsp;<b id="mvdate"><%=dto.getRev_date() %></b><br><br>
-상영관&nbsp;&nbsp;<b id="mvplace"><%=dto.getRev_place() %></b><br><br>
-인원&nbsp;<b id="mvpeople">
-성인<b id="adultCnt"></b>
-청소년<b id="teenCnt"></b>
-아동<b id="childCnt"></b>
-</b><br><br>
-좌석&nbsp;&nbsp;<b id="selectedSeat"></b><br><br>
-가격&nbsp;&nbsp;<b id="totalPrice"></b>원<br>
-</div>
+<span style="border: 1px solid gray;height:250px;position: absolute;top: 25px;left: 410px;" ></span>
 
 
-<input type="button" value="결제하기" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
+<div class="clickinfo">
+<table>
+   <tr>
+      <td>극장</td>
+      <td><b id="mvcinema"><%=dto.getRev_name() %></b></td>
+   </tr>
+   <tr>
+      <td>일시</td>
+      <td><b id="mvdate"><%=dto.getRev_date() %></b></td>
+   </tr>
+   <tr>
+      <td>상영관</td>
+      <td><b id="mvplace"><%=dto.getRev_place() %></b></td>
+   </tr>
+   <tr>
+      <td >인원</td>
+      <td>
+         <b>성인</b><b id="adultCnt"></b><br>
+         <b>청소년</b><b id="teenCnt"></b><br>
+         <b>아동</b><b id="childCnt"></b><br>
+      </td>
+   </tr>
+   <tr>
+      <td>좌석</td>
+      <td><b><span id="selectedSeat"></span></b></td>
+   </tr>
+   <tr>
+      <td>가격</td>
+      <td><b id="totalPrice">0</b>원</td>
+   </tr>
+</table>
 </div>
-</div>
+
+<span style="border: 1px solid gray;height:250px;position: absolute;top: 25px;left: 410px;" ></span>
+
+<input type="button" value="결제하기" class="btn btn-outline-danger" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
+</div> --%>
 
 </body>
 </html>

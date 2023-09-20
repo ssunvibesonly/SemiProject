@@ -13,7 +13,7 @@
 	String root=request.getContextPath();
 	
 	//기본페이지
-	String mainPage="layout/main.jsp";
+	String mainPage="movieadmin/AdminPage.jsp";
 
 	//url을 통해서 main값을 얻어 메인 페이지에 출력한다
 	if(request.getParameter("main")!=null)
@@ -23,8 +23,7 @@
 %>
 </head>
 <style type="text/css">
-
-.header{
+.header_admin{
 	width: 100%;
 	height: 100%;
 }
@@ -33,24 +32,15 @@
 	width: 100%;
 	height: 100%;
 }
-
-.footer{
-	width: 100%;
-	height: 100%;
-}
 </style>
 <body style="background-color: black; overflow-x: hidden">
 	
-	<div class="layout header">
-		<jsp:include page="layout/header.jsp"/>
+	<div class="layout header_admin">
+		<jsp:include page="layout/header_admin.jsp"/>
 	</div>
 	
-	<div class="layout main">
+	<div class="layout main_admin">
 		<jsp:include page="<%=mainPage %>"/>
-	</div>
-	
-	<div class="layout footer">
-		<jsp:include page="layout/footer.jsp"/>
 	</div>
 </body>
 </html>

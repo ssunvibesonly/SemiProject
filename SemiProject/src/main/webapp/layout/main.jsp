@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<%@page import="Dto.ShopDto"%>
+<%@page import="Dao.ShopDao"%>
+>>>>>>> goyoung
 <%@page import="Dto.MovieDto"%>
 <%@page import="java.util.List"%>
 <%@page import="Dao.MovieDao"%>
@@ -17,6 +22,7 @@
 <head>
 <meta charset="UTF-8">
 <link
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap"
@@ -40,20 +46,28 @@
 =======
    href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap"
    rel="stylesheet">
+=======
+	href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Cute+Font&family=Diphylleia&family=Dongle:wght@300&family=Hi+Melody&family=Nanum+Brush+Script&display=swap"
+	rel="stylesheet">
+>>>>>>> goyoung
 <link
-   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-   rel="stylesheet">
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
 <link rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet"
-   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 <script
+<<<<<<< HEAD
    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 <script
    src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+>>>>>>> goyoung
+=======
+	src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 >>>>>>> goyoung
 <title>main</title>
 <%
@@ -144,9 +158,8 @@ li {
 
 .swiper-slide img {
 	width: 100%;
-	max-width: 165px;
-	height: 100%;
-	max-height: 250px;
+	max-width: 180px;
+	height: auto;
 	border-radius: 10px;
 	margin: 30px 50px 0px 50px;
 }
@@ -253,8 +266,9 @@ li {
 }
 
 #videoname1 {
-	font-size: 23pt;
+	font-size: 25pt;
 	position: absolute;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,11 +286,16 @@ li {
 	top: 58%;
 	left: 22%;
 >>>>>>> goyoung
+=======
+	top: 60%;
+	left: 23%;
+>>>>>>> goyoung
 }
 
 #videoname2 {
-	font-size: 12pt;
+	font-size: 13pt;
 	position: absolute;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,6 +308,10 @@ li {
 =======
 	top: 66%;
 	left: 22%;
+>>>>>>> goyoung
+=======
+	top: 70%;
+	left: 23%;
 >>>>>>> goyoung
 }
 
@@ -310,9 +333,8 @@ li {
 #btnall2 {
 	position: absolute;
 	right: 13.45%;
-	top: 47.5%;
+	top: 48.7%; /* 여기 고치기 비율 안맞음 */
 	background-color: white;
-	border: 1px solid black;
 	border-radius: 20px;
 	font-weight: bold;
 	font-size: 0.9em;
@@ -341,8 +363,9 @@ li {
 	align-items: center;
 	height: 40px;
 	margin-top: 10px;
-	width: 73.2%;
+	width: 73%;
 	position: relative;
+<<<<<<< HEAD
 	left: 13.4%;
 	right: 13.4%;
 <<<<<<< HEAD
@@ -354,6 +377,10 @@ li {
 =======
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
+>>>>>>> goyoung
+=======
+	left: 13.5%;
+	right: 13.5%;
 >>>>>>> goyoung
 }
 
@@ -668,21 +695,24 @@ List <MovieDto> list=dao.getAllMovies();
 
 .special_special {
 	position: relative;
-	left: 13.5%;
-	top: 8.6%;
+	left: 13.2%;
+	right: 13.2%;
+	top: 4.6%;
+	width: 73.6%;
 	color: white;
 	font-size: 24px;
 }
 
 .special_result {
 	position: absolute;
+	margin-top: 2%;
 	width: 50%;
 	height: 100%;
 }
 
 .special_result img {
 	max-width: 95%; /* 이미지의 최대 가로 크기를 100%로 설정 */
-	max-height: 100%; /* 이미지의 최대 세로 크기를 100%로 설정 */
+	max-height: 90%; /* 이미지의 최대 세로 크기를 100%로 설정 */
 	height: 100%;
 	width: 100%;
 	border-radius: 20px;
@@ -691,13 +721,14 @@ List <MovieDto> list=dao.getAllMovies();
 .special_select {
 	position: absolute;
 	margin-left: 52%;
+	margin-top: 2%;
 	width: 48%;
 	height: 100%;
 }
 
 .special_select ul {
-	width: 100%;
-	height: 100%;
+	width: 99%;
+	height: 90%;
 	padding: 0;
 	display: flex;
 	flex-direction: column; /* 요소들을 세로로 배치 */
@@ -715,69 +746,123 @@ List <MovieDto> list=dao.getAllMovies();
 }
 
 .fixedbtn1 {
-    position: fixed;
-    width: 150px;
-    height: 60px;
-    bottom: 10%;
-    right: 15%;
-    background-color: #DF3E49;
-    color: white;
-    border-radius: 30px;
-    text-align: center;
-    z-index: 3;
-    font-size: 15pt;
-    font-variant: bold;
-    text-decoration: none;
-    padding: 15px;
-    display: none;  /* 초기에는 숨김 */
+	position: fixed;
+	width: 150px;
+	height: 60px;
+	bottom: 10%;
+	right: 15%;
+	background-color: #DF3E49;
+	color: white;
+	border-radius: 30px;
+	text-align: center;
+	z-index: 3;
+	font-size: 15pt;
+	font-variant: bold;
+	text-decoration: none;
+	padding: 15px;
+	display: none; /* 초기에는 숨김 */
 }
 
-.fixedbtn1:hover{
+.fixedbtn1:hover {
 	color: white;
 }
 
 .fixedbtn2 {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 10%;
-    right: 10%;
-    background-color: white;
-    color: white;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 3;
-    display: none; /* 초기에는 숨김 */
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 10%;
+	right: 10%;
+	background-color: white;
+	color: white;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 3;
+	display: none; /* 초기에는 숨김 */
 }
 
 .fixedbtn2-2 {
-	position:absolute;
-	top:5px;
+	position: absolute;
+	top: 5px;
 	right: 13px;
-    color: black;
-    height: 60px;
-    font-size: 25pt;
-    opacity: 0.7;
+	color: black;
+	height: 60px;
+	font-size: 25pt;
+	opacity: 0.7;
 }
 
+.package_header {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	color: white;
+}
+
+.package_contents {
+	margin-left: 13.2%;
+	width: 73.6%;
+	height: 580px;
+	display: flex;
+}
+
+.package_contents img {
+	max-width: 100px;
+	max-height: 90px;
+}
+
+.package_contents table {
+	width: 450px;
+	height: 500px;
+	border-radius: 20px;
+	background-color: white;
+	font-size: 1.1em;
+}
+
+.package_contents table td {
+	color: black;
+}
+
+.package_contents .btn {
+	border-radius: 20px;
+	border: 1px solid silver;
+	background-color: white;
+	width: 80px;
+	height: 40px;
+}
+
+.package_contents .btn:hover {
+	border-radius: 20px;
+	border: 1px solid silver;
+	background-color: black;
+	color: white;
+	width: 80px;
+	height: 40px;
+}
+
+.package_contents a {
+	color: black !important;
+}
 </style>
 <body>
-<%
+	<%
 MovieDao dao = new MovieDao();
 
 List <MovieDto> list=dao.getAllMovies();
 
+ShopDao dao1 = new ShopDao();
+ShopDto dto1 = new ShopDto();
+
 %>
 
 	<!-- 고정 버튼 -->
-	
+
 	<!-- 예매하기 버튼 -->
-	<a href="<%=root%>/index.jsp?main=Movie_reserve/movielist.jsp" class="fixedbtn1">예매하기</a>
-	
+	<a href="<%=root%>/index.jsp?main=Movie_reserve/movielist.jsp"
+		class="fixedbtn1">예매하기</a>
+
 	<!-- 상단바 이동 -->
-	<a href="#" class="fixedbtn2">
-	<i class="bi bi-arrow-up fixedbtn2-2"></i>
+	<a href="#" class="fixedbtn2"> <i
+		class="bi bi-arrow-up fixedbtn2-2"></i>
 	</a>
 
 	<script>
@@ -820,11 +905,11 @@ List <MovieDto> list=dao.getAllMovies();
 		</div>
 		<div style="margin-top: -70px;" class="video-frame">
 			<!-- padding-bottom : 16:9 비율의 퍼센트값 56.25%   -->
-			<iframe style="width: 100%; height:600px;"
-				src="https://www.youtube.com/embed/oSqK_v6zPoM?mute=1&autoplay=1&controls=0&modestbranding=1&disablekb=1&rel=0&"
-				title="YouTube video player" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen></iframe>
+			<iframe style="width: 100%; height: 600px;"
+    		src="https://www.youtube.com/embed/oSqK_v6zPoM?autoplay=1&mute=1&playlist=oSqK_v6zPoM&loop=1&controls=0&modestbranding=1&disablekb=1&rel=0&"
+    		title="YouTube video player" frameborder="0"
+   			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   			allowfullscreen></iframe>
 
 		</div>
 <<<<<<< HEAD
@@ -908,6 +993,7 @@ List <MovieDto> list=dao.getAllMovies();
 							<div style="position: relative; margin-top: 10px;">
 								<!-- position 속성 추가 -->
 								<img src="<%=dto.getMv_poster() %>"><br>
+<<<<<<< HEAD
 								<h5 style="color: white; font-size: 0.95em; margin-top: 15px;"><%=i+1%>. <%=dto.getMv_title() %>
 								</h5>
 								
@@ -921,6 +1007,11 @@ List <MovieDto> list=dao.getAllMovies();
 								</h5>
 								
 >>>>>>> goyoung
+=======
+								<h5 style="color: white; font-size: 0.85em; margin-top: 15px;"><%=dto.getMv_title() %>
+								</h5>
+
+>>>>>>> goyoung
 								<div class="hover-buttons"
 									style="position: absolute; bottom: 43%; left: 50%; transform: translateX(-50%); display: none;">
 									<!-- 상세보기 버튼 -->
@@ -931,12 +1022,16 @@ List <MovieDto> list=dao.getAllMovies();
 =======
 										id="swiper-btn1">
 										<a href="index.jsp?main=/layout/detail.jsp&mv_no=<%=dto.getMv_no() %>">상세보기</a>
+<<<<<<< HEAD
 										</button>
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 										id="swiper-btn1">
 										<a href="index.jsp?main=/layout/detail.jsp&mv_no=<%=dto.getMv_no() %>">상세보기</a>
 										</button>
+>>>>>>> goyoung
+=======
+									</button>
 >>>>>>> goyoung
 									<!-- 예매하기 버튼 -->
 									<button class="swiper-btn btn btn-right" data-movie-id="<%=i%>"
@@ -1124,83 +1219,95 @@ List <MovieDto> list=dao.getAllMovies();
 	</div>
 =======
 					<div class="swiper-slide">
-					<%
+						<%
 					}
 					}
 					%>
 					</div>
-					</div>
+				</div>
 
-					<div style="width: 100%; height: 450px;"
-						class="special_hall">
-					
-					<div class="special_special"><b>특별관</b></div>
+				<div style="width: 100%; height: 450px; margin-top: 25px;" class="special_hall">
+
+					<div class="special_special">
+						<b>특별관</b>
+					</div>
 					<button type="button" id="btnall2" name="btnall2"
-					class="btn btn-right" onclick="location.href=''">전체보기</button>
-						
-					<div class="special_hall_contents">
-					<div class="special_result"></div>
-					<div class="special_select">
-					
-					
-					<ul>
-						<li>SUITE CINEMA</li>
-						<li>CINE & LIVINGROOM</li>
-						<li>4DX</li>
-						<li>CINE de CHEF</li>
-					</ul>	
-					</div>
-					</div>	
-					</div>
-					
-					<script>
-					//슬라이드 페이지 넘어가는 버튼 및 슬라이드 효과 
-					var swiper = new Swiper(".mySwiper", {
-						spaceBetween : 30,
-						centeredSlides : true,
+						class="btn btn-right" onclick="location.href=''">전체보기</button>
 
-						pagination : {
-							el : ".swiper-pagination",
-							clickable : true,
-						},
-						navigation : {
-							nextEl : ".swiper-button-next",
-							prevEl : ".swiper-button-prev",
-						},
-					});
+					<div class="special_hall_contents">
+						<div class="special_result"></div>
+						<div class="special_select">
+
+
+							<ul>
+								<li>SUITE CINEMA</li>
+								<li>CINE & LIVINGROOM</li>
+								<li>4DX</li>
+								<li>CINE de CHEF</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<script>
+				var swiper = new Swiper(".mySwiper", {
+				    spaceBetween: 30,
+				    centeredSlides: true,
+				    pagination: {
+				        el: ".swiper-pagination",
+				        clickable: true,
+				    },
+				    navigation: {
+				        nextEl: ".swiper-button-next",
+				        prevEl: ".swiper-button-prev",
+				    },
+				    initialSlide: 0, // 시작 슬라이드 인덱스 (0부터 시작)
+				    autoplay: {
+				        delay: 5000, // 자동 전환 간격 (5초)
+				        disableOnInteraction: false, // 사용자 상호 작용 후에도 자동 전환 유지
+				    },
+				    speed: 700, // 슬라이드 전환 속도를 500 밀리초로 조정
+				    on: {
+				        slideChange: function () {
+				            if (swiper.activeIndex === 1) {
+				                // 2페이지에서 1페이지로 이동할 때 처리
+				                setTimeout(function () {
+				                    swiper.slideTo(0);
+				                }, 5000); // 1초 뒤에 1페이지로 이동
+				            }
+				        },
+				    },
+				});
 					
-					$(document).ready(function() {
+				    $(document).ready(function() {
 				        // 페이지가 로드될 때 초기 이미지 설정
 				        var defaultText = "SUITE CINEMA"; // 디폴트로 보여줄 텍스트
 				        var defaultImageUrl = "<img src='<%=root%>/image/special5.png'>"; // 디폴트 이미지 경로 설정
 
 				        // 디폴트 이미지를 special_result 요소에 추가
 				        $(".special_result").html(defaultImageUrl);
-				        
-				        //li의 초기 css 설정
+
+				        // li의 초기 css 설정
 				        $(".special_select li:eq(0)").css({
-				        	
-				        	"border" : "3px solid white",
-			            	"border-radius" : "20px",
-			            	"font-weight": "800",
-			        		"cursor": "pointer"
-				        })
+				            "border" : "3px solid white",
+				            "border-radius" : "20px",
+				            "font-weight": "800",
+				            "cursor": "pointer"
+				        });
 
 				        $(".special_select li").hover(function() {
 				            // 모든 li에서 border 제거
 				            $(".special_select li").css({
-				            	
-				            	"border": "",
-				            	"font-weight" : ""
+				                "border": "",
+				                "font-weight" : ""
 				            });
 
 				            // 마우스를 올렸을 때 해당 li에 border 추가
 				            $(this).css({
-				            	
-				            	"border" : "3px solid white",
-				            	"border-radius" : "20px",
-				            	"font-weight": "800",
-				        		"cursor": "pointer"
+				                "border" : "3px solid white",
+				                "border-radius" : "20px",
+				                "font-weight": "800",
+				                "cursor": "pointer"
 				            });
 
 				            var text = $(this).text(); // li 요소의 텍스트 가져오기
@@ -1214,7 +1321,7 @@ List <MovieDto> list=dao.getAllMovies();
 				            } else if (text === "4DX") {
 				                imageUrl = "<img src='<%=root%>/image/special7.png'>";
 				            } else if (text === "CINE de CHEF") {
-				                imageUrl = "<img src='<%=root%>/image/special9.png'>";
+				                imageUrl = "<img src='<%=root%>/image/special8.png'>";
 				            }
 
 				            // 이미지를 special_result 요소 내에 추가
@@ -1223,13 +1330,16 @@ List <MovieDto> list=dao.getAllMovies();
 				            // 마우스를 떼었을 때 이미지를 제거하지 않게
 				        });
 				    });
-					</script>
-				</div>
-			
+				</script>
+			</div>
+
 		</div>
 	</div>
 
+	<!-- 영화진흥위원회 api 호출 -->
+	<jsp:include page="restService.jsp" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	<script
 		src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -1259,6 +1369,138 @@ List <MovieDto> list=dao.getAllMovies();
 
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
+>>>>>>> goyoung
+=======
+	<h3 class="package_header" align="center">'3' CINE 만의 특별한!</h3>
+	<div class="package_contents">
+
+
+		<table style="margin-right: 25px;">
+			<tr>
+				<td colspan="2"
+					style="padding-left: 42px; font-size: 18pt; font-weight: 700; height: 80px; vertical-align: middle; border-bottom: 2px solid green;">팝콘</td>
+				<td style="border-bottom: 2px solid green;"><button
+						type="button" class="btn">더보기</button></td>
+			</tr>
+
+
+			<tr>
+				<td style="padding-left: 33px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=3"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/3.png;"></a></td>
+
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=3"
+					style="cursor: pointer;">아이고~소해~팝콘<br>
+					<b>₩5,500</b></a></td>
+
+			</tr>
+
+			<tr>
+				<td style="padding-left: 31px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=5"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/5.png;"></a></td>
+
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=5"
+					style="cursor: pointer;">달콤달콤 팝콘<br>
+					<b>₩6,500</b></a></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 41px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=7"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/7.png;" style="width: 80px;"></a></td>
+
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=7"
+					style="cursor: pointer;">묻고더블~치즈팝콘<br>
+					<b>₩6,500</b></a></td>
+			</tr>
+		</table>
+
+
+		<table style="margin-right: 25px;">
+			<tr>
+				<td colspan="3"
+					style="padding-left: 45px; font-size: 18pt; font-weight: 700; height: 80px; vertical-align: middle; border-bottom: 2px solid green;">CINE
+					콤보</td>
+				<td style="border-bottom: 2px solid green;"><button
+						type="button" class="btn">더보기</button></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 43px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=1"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/1.png;"></a></td>
+
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=1"
+					style="cursor: pointer;">'3'CINE 콤보<br>
+					<b>₩10,000</b></a></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 43px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=11"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/11.png;"></a></td>
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=11"
+					style="cursor: pointer;">소식좌 더블콤보<br>
+					<b>₩13,000</b></a></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 43px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=12"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/12.png;"></a></td>
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=12"
+					style="cursor: pointer;">대식좌 더블콤보<br>
+					<b>₩15,000</b></a></td>
+			</tr>
+		</table>
+
+
+		<table>
+			<tr>
+				<td colspan="3"
+					style="padding-left: 40px; font-size: 18pt; font-weight: 700; height: 80px; vertical-align: middle; border-bottom: 2px solid green;">영화티켓과
+					함께!</td>
+				<td style="border-bottom: 2px solid green;"><button
+						type="button" class="btn">더보기</button></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=13"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/13.png;"></a></td>
+				<td><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=13"
+					style="cursor: pointer;">'3'CINE 헤쳐모여 패키지<br>
+					<b>₩61,000</b></a></td>
+			</tr>
+
+			<tr>
+				<td style="padding-left: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=2"
+					style="cursor: pointer;"> <img alt=""
+						src="<%=root%>/shopimg/2.png;"></a></td>
+				<td style="padding-right: 40px;"><a
+					href="index.jsp?main=shop/shopdetail.jsp?shopnum=2"
+					style="cursor: pointer;">'3'조와 데이트<br>
+					<b>₩34,000</b></a></td>
+			</tr>
+
+		</table>
+	</div>
 >>>>>>> goyoung
 </body>
 </html>

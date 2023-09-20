@@ -99,10 +99,15 @@ body {
 
 .seat.occupied {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #fff;
 =======
 	width:30px;
 	height:30px;
+=======
+   width:30px;
+   height:30px;
+>>>>>>> goyoung
    border-top-left-radius: 10px;
   border-top-right-radius: 10px; 
   background-color: white;
@@ -209,6 +214,10 @@ body {
 position:absolute;
 =======
 background-color:white;
+<<<<<<< HEAD
+>>>>>>> goyoung
+=======
+border-radius:20px;
 >>>>>>> goyoung
 border:2px solid gray;
 top:750px;
@@ -273,15 +282,16 @@ ul li{
    
    //System.out.println(adultPrice+","+ teenPrice+","+ childPrice);
    
-   //사전에 예매된 좌석들을 가져오기
-   SeatDao sdao = new SeatDao();
-   List<SeatDto> list = sdao.getSeats();
-   
+   //사전에 예매된 좌석들을 가져오기(영화별)
+   String mv_no=dto.getMv_no();
+   List<String> rev_nos = dao.getRev_no(mv_no);
    String occupiedSeats="";
    
-   for(int i=0; i<list.size(); i++){
-      occupiedSeats+=list.get(i).getSeat_name()+",";
+   for(int i=0; i<rev_nos.size(); i++){
+      SeatDao sdao = new SeatDao();
+      occupiedSeats+=sdao.getSeatRev(rev_nos.get(i)).getSeat_name()+",";
    }
+   
    
    String[] seats = occupiedSeats.split(",");
    
@@ -289,18 +299,20 @@ ul li{
 <script type="text/javascript">
 $(function(){
    
-   //사전에 예매된 좌석들에 occupied 클래스 적용
-   <%
-      for(int i=0; i<seats.length; i++){
-         %>
-         var seat = $("#<%=seats[i]%>");
-         if(seat){
-            seat.addClass("occupied");
-         }
-         <%
-      }
-   %>
-   
+      //사전에 예매된 좌석들에 occupied 클래스 적용
+       <%
+          if(occupiedSeats!=""){
+             for(int i=0; i<seats.length; i++){
+                   %>
+                   var seat = $("#<%=seats[i]%>");
+                   if(seat){
+                      seat.addClass("occupied");
+                   }
+                   <%
+                }
+          }
+       %>
+      
    
    
    var adult=0;
@@ -390,7 +402,7 @@ $(function(){
       var seatName = $(this).text();
       
       if(total==0){
-         alert("좌석을 선택해 주세요.");
+         alert("인원을 선택해 주세요.");
          return;
       }
       
@@ -433,26 +445,33 @@ $(function(){
       var selectedSeat = $("#selectedSeat").text();
       var rev_no = <%=dto.getRev_no()%>;
       
+      /* alert(adultCnt+","+teenCnt+","+childCnt+","+totalPrice+","+selectedSeat+","+rev_no); */
+      
       $.ajax({
          type:"post",
-         url:"seatInsert.jsp",
+         url:"Movie_reserve/seatInsert.jsp",
          data:{"adultCnt":adultCnt,"teenCnt":teenCnt,"childCnt":childCnt,"totalPrice":totalPrice,"selectedSeat":selectedSeat,"rev_no":rev_no},
          dataType:"json",
          success:function(res){
             alert("insert success");
-            location.href="payment.jsp?seat_no="+res.seat_no;
+            location.href="index.jsp?main=Movie_reserve/payment.jsp?seat_no="+res.seat_no;
          }
       });
+      
       
    });
    
    
 });
 
-</script> --%>
+</script>
 </head>
 <body>
-<br><hr style="color: white;"><br>
+<br><br>
+<div class="container">
+<h1 style="color: white;font-weight: bold;margin-left: 40px;">좌석 선택</h1>
+<hr style="color: white">
+<hr style="border: 3px solid white;"></div>
 <div class="movie-container">
       <label>성인:</label>
       <select id="adult">
@@ -616,13 +635,17 @@ $(function(){
 극장&nbsp;<b>'3'CINE&nbsp;</b><b id="mvcinema"><%=dto.getRev_name() %></b><br><br>
 일시&nbsp;&nbsp;<b id="mvdate"><%=dto.getRev_date() %></b><br><br>
 상영관&nbsp;&nbsp;<b id="mvplace"><%=dto.getRev_place() %></b><br><br>
-인원&nbsp;&nbsp;<b>성인:</b><b>&nbsp;청소년:</b><b>&nbsp;아동:</b>
-좌석&nbsp;&nbsp;<b>좌석출력</b>
-가격&nbsp;&nbsp;<b>가격출력</b>
+인원&nbsp;<b id="mvpeople">
+성인<b id="adultCnt"></b>
+청소년<b id="teenCnt"></b>
+아동<b id="childCnt"></b>
+</b><br><br>
+좌석&nbsp;&nbsp;<b id="selectedSeat"></b><br><br>
+가격&nbsp;&nbsp;<b id="totalPrice"></b>원<br>
 </div>
 
 
-<input type="button" value="좌석선택" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
+<input type="button" value="결제하기" class="btn btn-outline-success" id="seatBtn" style="float: right; width: 150px; height: 150px; margin: 20px;">
 </div>
 </div>
 

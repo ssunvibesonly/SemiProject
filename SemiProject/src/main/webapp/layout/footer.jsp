@@ -30,13 +30,9 @@ a:hover {
 	text-decoration: none; /* 밑줄 제거 */
 }
 
-body {
-	background-color: black;
-}
-
 .contents1 {
 	margin-top: 20px;
-	font-size: 1em;
+	font-size: 0.9em;
 }
 
 .contents1>a {
@@ -44,12 +40,16 @@ body {
 	color: white;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	font-size: 0.8em;
 =======
 
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 	font-size: 0.8em;
+>>>>>>> goyoung
+=======
+
 >>>>>>> goyoung
 }
 
@@ -57,6 +57,7 @@ body {
 	color: white;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	font-size: 0.8em;
 =======
 
@@ -64,10 +65,15 @@ body {
 =======
 	font-size: 0.8em;
 >>>>>>> goyoung
+=======
+	font-size: 1em;
+
+>>>>>>> goyoung
 }
 
 .contents1>h6>a {
 	color: white;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	font-size: 0.7em;
@@ -76,6 +82,8 @@ body {
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 	font-size: 0.7em;
+>>>>>>> goyoung
+=======
 >>>>>>> goyoung
 }
 
@@ -87,9 +95,12 @@ body {
 	text-decoration: underline;
 }
 
-#mack {
+#foot {
+	position: relative;
+	top: -10%;
 	cursor: pointer;
-	width: 100%;
+	width: 1200px;
+	height: auto;
 }
 
 .contents1>a:hover {
@@ -104,11 +115,22 @@ body {
 	font-weight: bold;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	font-size: 0.8em;
 =======
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 	font-size: 0.8em;
+>>>>>>> goyoung
+=======
+}
+
+.gwang-go {
+    background-color: #F5F2ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
 >>>>>>> goyoung
 }
 </style>
@@ -130,6 +152,7 @@ String root = request.getContextPath();
 	<!-- 푸터 -->
 	<div class="footer_content1">
 		<div class="gwang-go content1">
+<<<<<<< HEAD
 			<img src="<%=root%>/image/mack.jpeg" name="mack" id="mack"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,6 +164,10 @@ String root = request.getContextPath();
 				style="width: 100%; height: 450px; margin-top: 40px;"
 >>>>>>> goyoung
 				onclick="location.href='https://www.mcdonalds.co.kr/kor/main.do'">
+=======
+			<img src="<%=root%>/image/footer1.png" name="foot" id="foot"
+				onclick="location.href=''">
+>>>>>>> goyoung
 		</div>
 		<div class="contents1" align="center">
 			<div class="contents2">
@@ -159,12 +186,16 @@ String root = request.getContextPath();
 				2023-서울부산-1955&nbsp; <a href="https://www.youtube.com/@goyoungii"><b
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 					style="font-size: 1.45em;">사업자정보확인</b></a>
 =======
 					style="font-size: 1.1em;">사업자정보확인</b></a>
 >>>>>>> c66e88a01cf6327ad6265949bf21045f7cba7ac7
 =======
 					style="font-size: 1.45em;">사업자정보확인</b></a>
+>>>>>>> goyoung
+=======
+					style="font-size: 0.95em;">사업자정보확인</b></a>
 >>>>>>> goyoung
 			</h6>
 			<h6>호스팅사업자: SY네트워크&nbsp; 개인정보보호 책임자 : 쌍용구&nbsp;대표이메일 :

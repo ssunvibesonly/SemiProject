@@ -44,8 +44,6 @@
 >>>>>>> goyoung
 </head>
 <style type="text/css">
-.layout{
-}
 
 .header{
 <<<<<<< HEAD
@@ -115,7 +113,7 @@
 	height: 100%;
 }
 </style>
-<body background="color: black;">
+<body style="background-color: black; overflow-x: hidden">
 	
 >>>>>>> goyoung
 	<div class="layout header">
@@ -133,9 +131,8 @@
 >>>>>>> goyoung
 	</div>
 	
-	<footer>
 	<div class="layout footer">
 		<jsp:include page="layout/footer.jsp"/>
-	</div></footer>
+	</div>
 </body>
 </html>

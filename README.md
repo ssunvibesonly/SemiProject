@@ -70,7 +70,7 @@ cgv를 모티브로 구현하였습니다.
 <div align="center">
 <br><br>
 <h2>메인 페이지</h2>
-  <img src="SemiProjectImage/세미프로젝트 전체 구현영상.gif">
+  <img src="../SemiProjectImage/세미프로젝트 전체 구현영상.gif">
 <br><br>
 <img src="image/main.gif" height="425px">
 </div>

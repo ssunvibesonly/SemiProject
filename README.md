@@ -1,6 +1,6 @@
 <div align="center">
 <br>
-<img src="image/logo.png" width="350">
+<img src="SemiProjectImage/logo.png" width="350">
 <br><br>
 </div>
 

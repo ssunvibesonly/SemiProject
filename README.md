@@ -39,55 +39,7 @@ cgv를 모티브로 구현하였습니다.
   <img src="https://img.shields.io/badge/JSON-000000?style=flat&logo=JSON&logoColor=white" />
   <br>
   <img src="https://img.shields.io/badge/Eclipse IDE-2C2255?style=flat&logo=Eclipse IDE&logoColor=white" />
-  <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat&logo=Apache Tomcat&logoColor=white" />
-  <br>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
-  <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat&logo=Amazon AWS&logoColor=white" />
-  <br>
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=Git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=GitHub&logoColor=white" />
-</div>
-
-<div align="center">
-<br><br>
-<h2>📌 사용 API</h2>
-<br><br>
-  <img src="https://img.shields.io/badge/naver-green?style=flat&logo=naver&logoColor=white"/>
-  <img src="https://img.shields.io/badge/kakao-yellow?style=flat&logo=kakao&logoColor=black"/>
-  <br>
-  영화진흥위원회, KG이니시스
-</div>
-
-<div align="center">
-<br><br>
-<h2>💁🏻‍♂️ 역할분담</h2>
-<br><br>
-진평 & 영준 : 메인 페이지, 상세 페이지 <br>
-선범 & 영환 : 로그인, 마이 페이지, 관리자 로그인, 영화 검색 <br>
-<b>순영 & 연주 : 카카오로그인 API,영화 예매, 좌석 선택, 결제,스토어 및 장바구니</b>
-</div>
-<div align="center">
-<h2>카카오 API<img src="https://img.shields.io/badge/kakao-yellow?style=flat&logo=kakao&logoColor=black"/></h2></div>
-<img src="SemiProjectImage/kakaoapi.png">
-<hr>
-<img src="SemiProjectImage/kakaoapi.gif">
-</div>
-<div align="center">
-<h2>스토어 및 장바구니</h2></div>
-<img src="SemiProjectImage/store.png">
-<hr>
-<span><b>1.관리자페이지 상품 등록화면</b></span>
-<img src="SemiProjectImage/sanginsert.gif">
-<br>
-<span><b>2.등록한 상품 리스트</b></span>
-<img src="SemiProjectImage/sanglist.gif">
-<br>
-<span><b>2.사용자 화면 상품 목록</b></span>
-<img src="SemiProjectImage/store.gif">
-</div>
-<div align="center">
-<br><br>
-<h2>메인 페이지</h2>
+  <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat&현</h2>
   <img src="SemiProjectImage/세미프로젝트 전체 구현영상.gif">
 <br><br>
 <img src="image/main.gif" height="425px">

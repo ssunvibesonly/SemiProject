@@ -64,13 +64,26 @@ cgv를 모티브로 구현하였습니다.
 <br><br>
 진평 & 영준 : 메인 페이지, 상세 페이지 <br>
 선범 & 영환 : 로그인, 마이 페이지, 관리자 로그인, 영화 검색 <br>
-순영 & 연주 : 영화 예매, 좌석 선택, 결제
+<b>순영 & 연주 : 카카오로그인 API,영화 예매, 좌석 선택, 결제,스토어 및 장바구니</b>
 </div>
-<h2>카카오 API<img src="https://img.shields.io/badge/kakao-yellow?style=flat&logo=kakao&logoColor=black"/></h2>
-<hr>
 <div align="center">
-<br><br>
+<h2>카카오 API<img src="https://img.shields.io/badge/kakao-yellow?style=flat&logo=kakao&logoColor=black"/></h2></div>
+<img src="SemiProjectImage/kakaoapi.png">
+<hr>
 <img src="SemiProjectImage/kakaoapi.gif">
+</div>
+<div align="center">
+<h2>스토어 및 장바구니</h2></div>
+<img src="SemiProjectImage/store.png">
+<hr>
+<span><b>1.관리자페이지 상품 등록화면</b></span>
+<img src="SemiProjectImage/sanginsert.gif">
+<br>
+<span><b>2.등록한 상품 리스트</b></span>
+<img src="SemiProjectImage/sanglist.gif">
+<br>
+<span><b>2.사용자 화면 상품 목록</b></span>
+<img src="SemiProjectImage/store.gif">
 </div>
 <div align="center">
 <br><br>

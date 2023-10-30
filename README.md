@@ -20,6 +20,27 @@ cgv를 모티브로 구현하였습니다.<br>
 
 <div align="center">
 <br><br>
+<h2>함께한 팀원들</h2>
+<br><br>
+👧🏻순영(조장) : https://github.com/ssunvibesonly <br>
+🧑🏻‍🦱영준 : https://github.com/sleepysudal <br>
+🧔🏻‍♂선범 : https://github.com/SEONBEOM928 <br>
+👦🏻영환 : https://github.com/spore2429 <br>
+👩🏻연주 : https://github.com/qqqkyj<br>
+<br><br>
+</div>
+
+<div align="center">
+<br><br>
+<h2>💁🏻‍♂️ 역할분담</h2>
+<br><br>
+진평 & 영준 : 메인 페이지, 상세 페이지 <br>
+선범 & 영환 : 로그인, 마이 페이지, 관리자 로그인, 영화 검색 <br>
+<b>순영 & 연주 : 카카오 로그인 API,영화 예매, 좌석 선택, 스토어 및 장바구니, 결제페이지</b>
+</div>
+
+<div align="center">
+<br><br>
 <h2>📆 개발 기간</h2>
 <br><br>
 2023.9.8 ~ 2023.9.22
@@ -44,15 +65,16 @@ cgv를 모티브로 구현하였습니다.<br>
 <br><br>
 <img src="image/main.gif" height="425px">
 </div>
-
+<hr>
+<h1><b>맡은 역할</b></h1>
 <div align="center">
-<br><br>
-<h2>함께한 팀원들</h2>
-<br><br>
-👧🏻순영(조장) : https://github.com/ssunvibesonly <br>
-🧑🏻‍🦱영준 : https://github.com/sleepysudal <br>
-🧔🏻‍♂선범 : https://github.com/SEONBEOM928 <br>
-👦🏻영환 : https://github.com/spore2429 <br>
-👩🏻연주 : https://github.com/qqqkyj<br>
-<br><br>
+<img src="SemiProjectImage/kakaoapi.png">
+<img src="SemiProjectImage/kakaoapi.gif">
+<img src="titlestore.png">
+<img src="SemiProjectImage/sanginsert.gif">
+<img src="SemiProjectImage/sanglist.gif">
+<img src="SemiProjectImage/store.gif">
+<img src="SemiProjectImage/myshop.gif">
+</div>
+  
 </div>

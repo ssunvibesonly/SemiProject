@@ -73,8 +73,17 @@ cgv를 모티브로 구현하였습니다.<br>
 <img src="titlestore.png">
 <img src="SemiProjectImage/sanginsert.gif">
 <img src="SemiProjectImage/sanglist.gif">
-<img src="SemiProjectImage/store.gif">
+<img src="store.gif">
 <img src="SemiProjectImage/myshop.gif">
+<img src="SemiProjectImage/movie.png">
+<img src="SemiProjectImage/movieselect.gif">
+<img src="SemiProjectImage/seatselect.gif">
+<img src="SemiProjectImage/pay.gif">
+</div>
+
+<div align="center">
+<h2>전체 구현 영상</h2>
+<img src="SemiProjectImage/SemiAll.gif">
 </div>
   
 </div>

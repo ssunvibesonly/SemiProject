@@ -80,10 +80,10 @@ cgv를 모티브로 구현하였습니다.<br>
 <img src="SemiProjectImage/seatselect.gif">
 <img src="SemiProjectImage/pay.gif">
 </div>
-
 <div align="center">
 <h2>전체 구현 영상</h2>
-<img src="SemiProjectImage/SemiAll.gif">
+  <hr>
+<img src="SemiProjectImage/세미프로젝트 전체 구현영상.gif">
 </div>
   
 </div>

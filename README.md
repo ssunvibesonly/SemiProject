@@ -12,12 +12,6 @@ cgv를 모티브로 구현하였습니다.<br>
 </div>
 
 <div align="center">
-<h2>전체 구현 영상</h2>
-  <hr>
-<img src="SemiProjectImage/세미프로젝트 전체 구현영상.gif">
-</div>
-
-<div align="center">
 <br><br>
 <h2>🔍 주요 기능</h2>
 <br><br>
@@ -85,6 +79,11 @@ cgv를 모티브로 구현하였습니다.<br>
 <img src="SemiProjectImage/movieselect.gif">
 <img src="SemiProjectImage/seatselect.gif">
 <img src="SemiProjectImage/pay.gif">
+</div>
+
+<div align="center">
+<h2>전체 구현 영상</h2>
+<img src="SemiProjectImage/세미프로젝트 전체 구현영상.gif">
 </div>
 
   

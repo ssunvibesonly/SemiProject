@@ -66,7 +66,10 @@ cgv를 모티브로 구현하였습니다.
 선범 & 영환 : 로그인, 마이 페이지, 관리자 로그인, 영화 검색 <br>
 순영 & 연주 : 영화 예매, 좌석 선택, 결제
 </div>
-
+<div align="center">
+<br><br>
+<img src="SemiProjectImage/kakaoapi.gif">
+</div>
 <div align="center">
 <br><br>
 <h2>메인 페이지</h2>

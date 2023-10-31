@@ -23,7 +23,7 @@ cgv를 모티브로 구현하였습니다.<br>
 <h2>함께한 팀원들</h2>
 <br><br>
 👧🏻순영(조장) : https://github.com/ssunvibesonly <br>
-🧒🏻진평 : 
+🧒🏻진평 : https://github.com/choijinpyung<br>
 🧑🏻‍🦱영준 : https://github.com/sleepysudal <br>
 🧔🏻‍♂선범 : https://github.com/SEONBEOM928 <br>
 👦🏻영환 : https://github.com/spore2429 <br>
